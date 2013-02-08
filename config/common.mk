@@ -93,7 +93,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.goo.rom=liquidsmoothJB2 \
   ro.goo.developerid=liquidsmooth \
-  ro.goo.version=$(shell date +%0d%^b%Y-%H%M%S)
+  ro.goo.version=$(shell date +%Y%m%d)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.liquid.version=$(LIQUID_VERSION)
