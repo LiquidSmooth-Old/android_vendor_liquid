@@ -1,5 +1,4 @@
 add_lunch_combo liquid_d2att-userdebug
-add_lunch_combo liquid_d2cri-userdebug
 add_lunch_combo liquid_d2mtr-userdebug
 add_lunch_combo liquid_d2spr-userdebug
 add_lunch_combo liquid_d2tmo-userdebug
