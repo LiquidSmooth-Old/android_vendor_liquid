@@ -18,6 +18,7 @@ add_lunch_combo liquid_solana-userdebug
 add_lunch_combo liquid_spyder-userdebug
 add_lunch_combo liquid_t0lte-userdebug
 add_lunch_combo liquid_targa-userdebug
+add_lunch_combo liquid_tf700t-userdebug
 add_lunch_combo liquid_tilapia-userdebug
 add_lunch_combo liquid_toro-userdebug
 add_lunch_combo liquid_toroplus-userdebug
