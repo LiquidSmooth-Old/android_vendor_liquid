@@ -29,10 +29,13 @@ PRODUCT_PACKAGES += \
 
 # prebuilts
 PRODUCT_PACKAGES += \
+    GooManager \
     LatinIME \
     LockClock \
     NovaLauncher \
-    Superuser
+    Superuser \
+    XposedDPI \
+    XposedInstaller
 
 # tools
 PRODUCT_PACKAGES += \
