@@ -1,3 +1,4 @@
+add_lunch_combo liquid_ace-userdebug
 add_lunch_combo liquid_d2att-userdebug
 add_lunch_combo liquid_d2mtr-userdebug
 add_lunch_combo liquid_d2spr-userdebug
