@@ -23,12 +23,15 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     Torch
 
+# packages from source
+PRODUCT_PACKAGES += \
+    PerformanceControl
+
 # prebuilts
 PRODUCT_PACKAGES += \
     LatinIME \
     LockClock \
     NovaLauncher \
-    Performance \
     Superuser
 
 # tools
