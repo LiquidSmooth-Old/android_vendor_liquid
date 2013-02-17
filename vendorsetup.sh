@@ -14,6 +14,7 @@ add_lunch_combo liquid_mako-userdebug
 add_lunch_combo liquid_manta-userdebug
 add_lunch_combo liquid_maserati-userdebug
 add_lunch_combo liquid_n7100-userdebug
+add_lunch_combo liquid_pyramid-userdebug
 add_lunch_combo liquid_solana-userdebug
 add_lunch_combo liquid_spyder-userdebug
 add_lunch_combo liquid_t0lte-userdebug
