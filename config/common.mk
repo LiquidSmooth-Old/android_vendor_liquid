@@ -48,6 +48,7 @@ PRODUCT_PACKAGES += \
 include vendor/liquid/config/theme_chooser.mk
 
 # overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
 # bin
@@ -72,7 +73,7 @@ PRODUCT_COPY_FILES += \
 
 # keyboard
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/liquid/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 
 # sip/voip
 PRODUCT_COPY_FILES += \
