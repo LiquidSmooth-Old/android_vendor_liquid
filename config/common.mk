@@ -33,7 +33,6 @@ PRODUCT_PACKAGES += \
     GooManager \
     LatinIME \
     LockClock \
-    NovaLauncher \
     Superuser \
     XposedDPI \
     XposedInstaller
@@ -63,6 +62,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks
 
+# launcher
+PRODUCT_COPY_FILES += \
+    vendor/liquid/proprietary/NovaLauncher/NovaLauncher.apk:system/app/NovaLauncher.apk
+
 # prebuilt
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
@@ -88,7 +91,7 @@ PRODUCT_COPY_FILES += \
 RELEASE = true
 LIQUID_VERSION_MAJOR = 2
 LIQUID_VERSION_MINOR = 1
-LIQUID_VERSION_STATE = "RC1"
+LIQUID_VERSION_STATE = "RC1.5"
 
 ifeq ($(RELEASE),true)
     LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
