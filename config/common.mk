@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     GooManager \
     LatinIME \
     LockClock \
+    SoundRecorder \
     Superuser \
     XposedDPI \
     XposedInstaller
