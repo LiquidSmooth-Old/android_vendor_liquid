@@ -24,3 +24,4 @@ add_lunch_combo liquid_tilapia-userdebug
 add_lunch_combo liquid_toro-userdebug
 add_lunch_combo liquid_toroplus-userdebug
 add_lunch_combo liquid_umts_spyder-userdebug
+add_lunch_combo liquid_ville-userdebug
