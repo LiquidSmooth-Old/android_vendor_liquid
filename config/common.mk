@@ -100,6 +100,14 @@ else
     LIQUID_VERSION := "Liquid-JB-exp"-$(shell date +%0d%^b%Y-%H%M%S)
 endif
 
+# build.prop tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.kernel.android.checkjni=0 \
+  ro.media.enc.jpeg.quality=100 \
+  debug.sf.hw=1 \
+  video.accelerate.hw=1 \
+  ro.kernel.checkjni=0 
+
 # goo.im properties
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.goo.rom=liquidsmoothJB2 \
