@@ -27,14 +27,17 @@ PRODUCT_PACKAGES += \
 # packages from source
 PRODUCT_PACKAGES += \
     DashClock \
-    PerformanceControl
+    PerformanceControl \
+    Superuser \
+    su \
+    Widgets
+
 
 # prebuilts
 PRODUCT_PACKAGES += \
     LatinIME \
     LockClock \
     SoundRecorder \
-    Superuser \
     XposedDPI \
     XposedInstaller
 
@@ -43,6 +46,9 @@ PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
     tune2fs
+
+# superuser embedded
+SUPERUSER_EMBEDDED := true
 
 # themes
 include vendor/liquid/config/theme_chooser.mk
@@ -69,7 +75,6 @@ PRODUCT_COPY_FILES += \
 
 # prebuilt
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
