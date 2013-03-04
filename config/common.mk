@@ -49,6 +49,7 @@ PRODUCT_PACKAGES += \
 
 # superuser embedded
 SUPERUSER_EMBEDDED := true
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.liquid.superuser
 
 # themes
 include vendor/liquid/config/theme_chooser.mk
