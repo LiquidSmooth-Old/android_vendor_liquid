@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
 
 # packages from source
 PRODUCT_PACKAGES += \
+    armzipalign \
     DashClock \
     PerformanceControl \
     Superuser \
