@@ -97,16 +97,10 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/com.liquidsmooth.nfc.enhanced.xml:system/etc/permissions/com.liquidsmooth.nfc.enhanced.xml
 
 # version
-RELEASE = true
 LIQUID_VERSION_MAJOR = 2
 LIQUID_VERSION_MINOR = 1
-LIQUID_VERSION_STATE = "RC2"
-
-ifeq ($(RELEASE),true)
-    LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
-else
-    LIQUID_VERSION := "Liquid-JB-exp"-$(shell date +%0d%^b%Y-%H%M%S)
-endif
+LIQUID_VERSION_STATE = "STABLE"
+LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 
 # build.prop tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
