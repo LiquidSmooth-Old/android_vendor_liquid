@@ -37,7 +37,7 @@ PRODUCT_PACKAGES += \
 # prebuilts
 PRODUCT_PACKAGES += \
     LatinIME \
-    Liquid \
+    LiquidPapers \
     LockClock \
     SoundRecorder \
     XposedDPI \
