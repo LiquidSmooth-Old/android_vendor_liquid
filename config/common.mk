@@ -26,9 +26,12 @@ PRODUCT_PACKAGES += \
 
 # packages from source
 PRODUCT_PACKAGES += \
+    Apollo \
     armzipalign \
     DashClock \
+    DSPManager \
     PerformanceControl \
+    SoundRecorder \
     Superuser \
     su \
     Widgets
@@ -39,7 +42,6 @@ PRODUCT_PACKAGES += \
     LatinIME \
     LiquidPapers \
     LockClock \
-    SoundRecorder \
     XposedDPI \
     XposedInstaller
 
@@ -99,7 +101,7 @@ PRODUCT_COPY_FILES += \
 # version
 LIQUID_VERSION_MAJOR = 2
 LIQUID_VERSION_MINOR = 1
-LIQUID_VERSION_STATE = "STABLE"
+LIQUID_VERSION_STATE = "OFFICIAL"
 LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 
 # build.prop tweaks
