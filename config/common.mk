@@ -38,7 +38,6 @@ PRODUCT_PACKAGES += \
     su \
     Widgets
 
-
 # prebuilts
 PRODUCT_PACKAGES += \
     LatinIME \
@@ -61,8 +60,8 @@ SUPERUSER_PACKAGE_PREFIX := com.android.settings.liquid.superuser
 include vendor/liquid/config/theme_chooser.mk
 
 # overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 
 # bin
 PRODUCT_COPY_FILES += \
@@ -102,7 +101,7 @@ PRODUCT_COPY_FILES += \
 
 # version
 LIQUID_VERSION_MAJOR = 2
-LIQUID_VERSION_MINOR = 1
+LIQUID_VERSION_MINOR = 2
 LIQUID_VERSION_STATE = "OFFICIAL"
 LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 
@@ -112,7 +111,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.media.enc.jpeg.quality=100 \
   debug.sf.hw=1 \
   video.accelerate.hw=1 \
-  ro.kernel.checkjni=0 
+  ro.kernel.checkjni=0
 
 # goo.im properties
 PRODUCT_PROPERTY_OVERRIDES += \
