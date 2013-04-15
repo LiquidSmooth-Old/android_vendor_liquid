@@ -100,10 +100,17 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/com.liquidsmooth.nfc.enhanced.xml:system/etc/permissions/com.liquidsmooth.nfc.enhanced.xml
 
 # version
+RELEASE = false
 LIQUID_VERSION_MAJOR = 2
 LIQUID_VERSION_MINOR = 2
-LIQUID_VERSION_STATE = "OFFICIAL"
-LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
+
+ifeq ($(RELEASE),true)
+    LIQUID_VERSION_STATE := "OFFICIAL"
+    LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
+else
+    LIQUID_VERSION_STATE := "NIGHTLY"
+    LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
+endif
 
 # build.prop tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -114,10 +121,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.kernel.checkjni=0
 
 # goo.im properties
-PRODUCT_PROPERTY_OVERRIDES += \
-  ro.goo.rom=liquidsmoothJB2 \
-  ro.goo.developerid=liquidsmooth \
-  ro.goo.version=$(shell date +%Y%m%d)
+ifeq ($(RELEASE),true)
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.goo.rom=liquidsmoothJB2 \
+        ro.goo.developerid=liquidsmooth \
+        ro.goo.version=$(shell date +%Y%m%d)
+else
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.goo.rom=liquidsmoothJB2nightly \
+        ro.goo.developerid=liquidsmooth \
+        ro.goo.version=$(shell date +%Y%m%d)
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.liquid.version=$(LIQUID_VERSION)
