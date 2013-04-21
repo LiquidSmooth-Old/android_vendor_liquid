@@ -105,8 +105,9 @@ rm -rf $REPACK/ota/system/etc/recovery-resource.dat
 
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.liquid\.version/s/^.*=//p' $OUT/system/build.prop`
+TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
 echo $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
-OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT.zip
+OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
 
 # Pack it up and sign
 printf "Zipping package..."
