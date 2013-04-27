@@ -24,7 +24,7 @@ PRODUCT_PACKAGES += \
     Torch \
     VoiceDialer
 
-# packages from source
+# others
 PRODUCT_PACKAGES += \
     Apollo \
     armzipalign \
@@ -43,23 +43,26 @@ PRODUCT_PACKAGES += \
     LatinIME \
     LiquidPapers \
     LockClock
+    
+# theme chooser
+PRODUCT_PACKAGES += \
+    ThemeManager \
+    ThemeChooser \
+    com.tmobile.themes
 
-# tools
+# system tools
 PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
     tune2fs
 
-# superuser embedded
-SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.liquid.superuser
-
-# themes
-include vendor/liquid/config/theme_chooser.mk
-
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
+
+# superuser
+SUPERUSER_EMBEDDED := true
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.liquid.superuser
 
 # bin
 PRODUCT_COPY_FILES += \
@@ -91,6 +94,10 @@ PRODUCT_COPY_FILES += \
 # sip/voip
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+# theme chooser
+PRODUCT_COPY_FILES += \
+    vendor/liquid/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
 
 # nfc
 PRODUCT_COPY_FILES += \
@@ -132,4 +139,4 @@ else
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.liquid.version=$(LIQUID_VERSION)
+    ro.liquid.version=$(LIQUID_VERSION)
