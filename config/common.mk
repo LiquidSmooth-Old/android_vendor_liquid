@@ -42,9 +42,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LatinIME \
     LiquidPapers \
-    LockClock \
-    XposedDPI \
-    XposedInstaller
+    LockClock
 
 # tools
 PRODUCT_PACKAGES += \
