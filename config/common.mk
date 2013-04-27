@@ -98,9 +98,9 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/com.liquidsmooth.nfc.enhanced.xml:system/etc/permissions/com.liquidsmooth.nfc.enhanced.xml
 
 # version
-RELEASE = false
+RELEASE = true
 LIQUID_VERSION_MAJOR = 2
-LIQUID_VERSION_MINOR = 2
+LIQUID_VERSION_MINOR = 3
 
 ifeq ($(RELEASE),true)
     LIQUID_VERSION_STATE := "OFFICIAL"
