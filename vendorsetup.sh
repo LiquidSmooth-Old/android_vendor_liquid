@@ -10,6 +10,7 @@ add_lunch_combo liquid_i9100-userdebug
 add_lunch_combo liquid_i9300-userdebug
 add_lunch_combo liquid_i9305-userdebug
 add_lunch_combo liquid_l900-userdebug
+add_lunch_combo liquid_infuse4g-userdebug
 add_lunch_combo liquid_maguro-userdebug
 add_lunch_combo liquid_mako-userdebug
 add_lunch_combo liquid_manta-userdebug
@@ -23,3 +24,4 @@ add_lunch_combo liquid_targa-userdebug
 add_lunch_combo liquid_tilapia-userdebug
 add_lunch_combo liquid_toro-userdebug
 add_lunch_combo liquid_umts_spyder-userdebug
+add_lunch_combo liquid_ville-userdebug
