@@ -21,8 +21,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     NoiseField \
     PhaseBeam \
-    Torch \
-    VoiceDialer
+    Torch
 
 # others
 PRODUCT_PACKAGES += \
