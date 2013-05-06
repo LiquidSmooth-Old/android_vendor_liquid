@@ -41,7 +41,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LatinIME \
     LiquidPapers \
-    LockClock
+    LockClock \
+    XposedDPI \
+    XposedInstaller
     
 # theme chooser
 PRODUCT_PACKAGES += \
