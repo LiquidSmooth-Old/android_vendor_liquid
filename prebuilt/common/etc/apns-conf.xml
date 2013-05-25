@@ -35,6 +35,7 @@
   <apn carrier="Tele2 NL" mcc="204" mnc="02" apn="internet.tele2.nl" type="default,supl" />
   <apn carrier="Tele2 MMS NL" mcc="204" mnc="02" apn="internet.tele2.nl" mmsc="http://mmsc.tele2.nl" mmsproxy="193.12.40.64" mmsport="8080" type="mms" />
   <apn carrier="Vodafone NL" mcc="204" mnc="04" apn="live.vodafone.com" user="vodafone" password="vodafone" mmsc="http://mmsc.mms.vodafone.nl" mmsproxy="192.168.251.150" mmsport="8799" type="default,supl,mms" />
+  <apn carrier="hollandsnieuwe int." mcc="204" mnc="04" apn="data.dataxs.mobi" type="default" />
   <apn carrier="Vodafone MMS Business" mcc="204" mnc="04" apn="office.vodafone.nl" user="vodafone" password="vodafone" mmsc="http://mmsc.mms.vodafone.nl" mmsproxy="192.168.251.150" mmsport="8799" type="mms" />
   <apn carrier="KPN" mcc="204" mnc="08" apn="internet" user="kpn" password="gprs" type="default,supl" />
   <apn carrier="KPN" mcc="204" mnc="08" apn="portalmmm.nl" mmsc="http://mp.mobiel.kpn/mmsc" mmsproxy="10.10.100.20" mmsport="5080" type="default,supl,mms" />
@@ -89,7 +90,7 @@
   <apn carrier="Vodafone ES MMS" mcc="214" mnc="01" apn="mms.vodafone.net" user="wap@wap" password="wap125" mmsc="http://mmsc.vodafone.es/servlets/mms" mmsproxy="212.73.32.10" mmsport="80" type="mms" />
   <apn carrier="Orange Internet ES" mcc="214" mnc="03" apn="internet" user="orange" password="orange" type="default,supl" />
   <apn carrier="Orange ES MMS" mcc="214" mnc="03" apn="orangemms" user="orange" password="orange" mmsc="http://mms.orange.es" mmsproxy="172.22.188.25" mmsport="8080" type="mms" />
-  <apn carrier="Orange World ES" mcc="214" mnc="03" apn="orangeworld" user="orange" password="orange" proxy="10.32.61.10" port="8080" type="default,supl" />
+  <apn carrier="Orange World ES" mcc="214" mnc="03" apn="orangeworld" user="orange" password="orange" proxy="10.132.61.10" port="8080" type="default,supl" />
   <apn carrier="Yoigo" mcc="214" mnc="04" apn="internet" proxy="010.008.000.036" port="8080" type="default,supl" />
   <apn carrier="Yoigo MMS" mcc="214" mnc="04" apn="mms" mmsc="http://mms" mmsproxy="193.209.134.141" mmsport="80" type="mms" />
   <apn carrier="Tuenti Internet" mcc="214" mnc="05" apn="tuenti.com" user="tuenti" password="tuenti" type="default,supl" />
@@ -615,6 +616,8 @@
   <apn carrier="Videotron" mcc="302" mnc="500" apn="media.videotron" mmsc="http://media.videotron.com/" mmsproxy="10.208.89.17" mmsport="8080" type="default,supl,mms" />
   <apn carrier="Claro PR" mcc="330" mnc="11" apn="internet.claropr.com" port="8080" type="default,supl" />
   <apn carrier="Claro PR MMS" mcc="330" mnc="11" apn="mms.claropr.com" mmsc="http://mmsg.claropr.com:1021/mmsc" mmsproxy="10.50.38.3" mmsport="8799" type="mms" />
+  <apn carrier="LTE CLARO" mcc="330" mnc="11" apn="lte.claropr.com" authenticatiotype="PAP" type="default,supl" />
+  <apn carrier="MMS CLARO" mcc="330" mnc="11" apn="mmslte.claropr.com" mmsc="http://mmsg.claropr.com:10021/mmsc" mmsproxy="10.50.38.3" mmsport="8799" authenticatiotype="PAP" type="mms" />
   <apn carrier="Telcel EDGE" mcc="334" mnc="020" apn="internet.itelcel.com" user="webgprs" password="webgprs2002" type="default,supl" />
   <apn carrier="Telcel MMS" mcc="334" mnc="020" apn="mms.itelcel.com" user="mmsgprs" password="mmsgprs2003" mmsc="http://mms.itelcel.com/servlets/mms" mmsproxy="148.233.151.240" mmsport="8080" type="mms" />
   <apn carrier="Telcel Internet" mcc="334" mnc="02" apn="internet.itelcel.com" user="webgprs" password="webgprs2002" type="default,supl" />
