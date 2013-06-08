@@ -8,8 +8,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
-    ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
+    ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false
 
 # packages
@@ -26,7 +26,6 @@ PRODUCT_PACKAGES += \
 # others
 PRODUCT_PACKAGES += \
     Apollo \
-    armzipalign \
     DashClock \
     DSPManager \
     libcyanogen-dsp \
@@ -34,14 +33,15 @@ PRODUCT_PACKAGES += \
     PerformanceControl \
     SoundRecorder \
     Superuser \
-    su \
-    Widgets
+    Widgets \
+    su
 
 # prebuilts
 PRODUCT_PACKAGES += \
     LatinIME \
     LiquidPapers \
     LockClock \
+    NovaLauncher \
     XposedDPI \
     XposedInstaller
     
@@ -73,14 +73,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/init.liquid.rc:root/init.liquid.rc
 
-# initd
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks
-
-# launcher
-PRODUCT_COPY_FILES += \
-    vendor/liquid/proprietary/NovaLauncher/NovaLauncher.apk:system/app/NovaLauncher.apk
-
 # prebuilt
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
@@ -111,20 +103,20 @@ LIQUID_VERSION_MAJOR = 2
 LIQUID_VERSION_MINOR = 6
 
 ifeq ($(RELEASE),true)
-    LIQUID_VERSION_STATE := "OFFICIAL"
-    LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
+    LIQUID_VERSION_STATE := OFFICIAL
+    LIQUID_VERSION := Liquid-JB-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 else
-    LIQUID_VERSION_STATE := "NIGHTLY"
-    LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
+    LIQUID_VERSION_STATE := NIGHTLY
+    LIQUID_VERSION := Liquid-JB-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 endif
 
 # build.prop tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.kernel.android.checkjni=0 \
   ro.media.enc.jpeg.quality=100 \
+  ro.kernel.android.checkjni=0 \
   debug.sf.hw=1 \
-  video.accelerate.hw=1 \
-  ro.kernel.checkjni=0
+  ro.kernel.checkjni=0 \
+  video.accelerate.hw=1
 
 # goo.im properties
 ifeq ($(RELEASE),true)
