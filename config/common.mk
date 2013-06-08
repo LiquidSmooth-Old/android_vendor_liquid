@@ -41,7 +41,6 @@ PRODUCT_PACKAGES += \
     LatinIME \
     LiquidPapers \
     LockClock \
-    NovaLauncher \
     XposedDPI \
     XposedInstaller
     
@@ -72,6 +71,10 @@ PRODUCT_COPY_FILES += \
 # etc
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/init.liquid.rc:root/init.liquid.rc
+
+# launcher
+PRODUCT_COPY_FILES += \
+    vendor/liquid/proprietary/NovaLauncher/NovaLauncher.apk:system/app/NovaLauncher.apk
 
 # prebuilt
 PRODUCT_COPY_FILES += \
