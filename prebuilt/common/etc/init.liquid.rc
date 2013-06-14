@@ -2,18 +2,17 @@
 
 on init
     export ANDROID_CACHE /cache
-    export TERMINFO /system/etc/terminfo
-    export TERM linux
 
 on post-fs-data
     mkdir /cache/dalvik-cache 0771 system system
     chown system system /cache/dalvik-cache
     chmod 0771 /cache/dalvik-cache
+    mkdir /data/.ssh 0750 root shell
 
-on boot
     # Run sysinit
     start sysinit
 
+on boot
     chown system system /sys/block/mmcblk0/queue/scheduler
     chmod 0664 /sys/block/mmcblk0/queue/scheduler
 
@@ -36,15 +35,8 @@ on property:service.adb.tcp.port=-1
     stop adbd
     start adbd
 
-# Compcache - handle at boot
-service compcache /system/bin/handle_compcache
-    class main
-    user root
-    group root
-    oneshot
-
 # sysinit (/system/etc/init.d)
 service sysinit /system/bin/sysinit
     user root
     oneshot
-
+    disabled
