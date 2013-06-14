@@ -1,5 +1,8 @@
-# brand
 PRODUCT_BRAND ?= liquid
+
+# superuser
+SUPERUSER_EMBEDDED := true
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.liquid.superuser
 
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -58,11 +61,9 @@ PRODUCT_PACKAGES += \
 
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
-PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 
-# superuser
-SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.liquid.superuser
+# dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 
 # bin
 PRODUCT_COPY_FILES += \
@@ -72,10 +73,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/init.liquid.rc:root/init.liquid.rc
 
-# launcher
-PRODUCT_COPY_FILES += \
-    vendor/liquid/proprietary/NovaLauncher/NovaLauncher.apk:system/app/NovaLauncher.apk
-
 # prebuilt
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
@@ -83,13 +80,23 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
+# keyboard
 ifdef BUILD_WITH_SOURCE_JNI
 PRODUCT_PACKAGES += \
     libjni_latinime
 else
-# keyboard
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+endif
+
+# launcher
+PRODUCT_COPY_FILES += \
+    vendor/liquid/proprietary/NovaLauncher/NovaLauncher.apk:system/app/NovaLauncher.apk
+
+# media
+ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/bootanimation/$(TARGET_SCREEN_WIDTH).zip:system/media/bootanimation.zip
 endif
 
 # sip/voip
@@ -118,15 +125,7 @@ else
     LIQUID_VERSION := Liquid-JB-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 endif
 
-# build.prop tweaks
-PRODUCT_PROPERTY_OVERRIDES += \
-  ro.media.enc.jpeg.quality=100 \
-  ro.kernel.android.checkjni=0 \
-  debug.sf.hw=1 \
-  ro.kernel.checkjni=0 \
-  video.accelerate.hw=1
-
-# goo.im properties
+# goo.im
 ifeq ($(RELEASE),true)
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.rom=liquidsmoothJB2 \
