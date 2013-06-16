@@ -22,7 +22,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.alarm_alert=Cesium.ogg
 
 # media
-ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
+ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/bootanimation/1280.zip:system/media/bootanimation.zip
 endif
