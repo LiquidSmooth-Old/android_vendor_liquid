@@ -31,6 +31,7 @@ PRODUCT_PACKAGES += \
     Apollo \
     DashClock \
     DSPManager \
+    HALO \
     libcyanogen-dsp \
     audio_effects.conf \
     PerformanceControl \
