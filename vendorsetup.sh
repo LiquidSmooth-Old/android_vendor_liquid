@@ -21,7 +21,6 @@ add_lunch_combo liquid_maguro-userdebug
 add_lunch_combo liquid_mako-userdebug
 add_lunch_combo liquid_manta-userdebug
 add_lunch_combo liquid_maserati-userdebug
-add_lunch_combo liquid_m7-userdebug
 add_lunch_combo liquid_n7000-userdebug
 add_lunch_combo liquid_n7100-userdebug
 add_lunch_combo liquid_solana-userdebug
@@ -31,5 +30,4 @@ add_lunch_combo liquid_targa-userdebug
 add_lunch_combo liquid_tilapia-userdebug
 add_lunch_combo liquid_toro-userdebug
 add_lunch_combo liquid_umts_spyder-userdebug
-add_lunch_combo liquid_ville-userdebug
 add_lunch_combo liquid_gio-userdebug
