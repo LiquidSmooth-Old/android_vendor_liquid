@@ -1,10 +1,5 @@
-
 # dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/all_dictionaries
-
-# gps
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf
 
 # spn
 PRODUCT_COPY_FILES += \

@@ -1,10 +1,6 @@
 # dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/all_dictionaries
 
-# gps
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/gps-cdma.conf:system/etc/gps.conf
-
 # apns
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/apns-conf-cdma.xml:system/etc/apns-conf.xml
