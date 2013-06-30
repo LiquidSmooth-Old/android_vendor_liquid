@@ -4,10 +4,6 @@ include frameworks/base/data/sounds/AllAudio.mk
 # common
 $(call inherit-product, vendor/liquid/config/common.mk)
 
-# gps
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf
-
 # bluetooth
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
