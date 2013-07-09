@@ -31,7 +31,6 @@ PRODUCT_PACKAGES += \
     Apollo \
     DashClock \
     DSPManager \
-    HALO \
     libcyanogen-dsp \
     audio_effects.conf \
     PerformanceControl \
@@ -47,6 +46,11 @@ PRODUCT_PACKAGES += \
     LockClock \
     XposedDPI \
     XposedInstaller
+
+# telephony
+PRODUCT_PACKAGES += \
+    CellBroadcastReceiver \
+    Provision
     
 # theme chooser
 PRODUCT_PACKAGES += \
