@@ -8,8 +8,7 @@ add_lunch_combo liquid_grouper-userdebug
 add_lunch_combo liquid_i605-userdebug
 add_lunch_combo liquid_i9300-userdebug
 add_lunch_combo liquid_i9305-userdebug
-add_lunch_combo liquid_jflteatt-userdebug
-add_lunch_combo liquid_jfltecan-userdebug
+add_lunch_combo liquid_jfltei337-userdebug
 add_lunch_combo liquid_jfltespr-userdebug
 add_lunch_combo liquid_jfltetmo-userdebug
 add_lunch_combo liquid_jflteusc-userdebug

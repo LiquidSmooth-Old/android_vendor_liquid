@@ -1,8 +1,7 @@
-PRODUCT_BRAND ?= liquid
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # superuser
 SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.liquid.superuser
 
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -15,9 +14,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false
 
+# selinux
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
 # packages
 PRODUCT_PACKAGES += \
-    Camera \
     Galaxy4 \
     HoloSpiralWallpaper \
     LiveWallpapers \
@@ -34,7 +36,6 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     audio_effects.conf \
     PerformanceControl \
-    SoundRecorder \
     Superuser \
     Widgets \
     su
@@ -86,13 +87,8 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # keyboard
-ifdef BUILD_WITH_SOURCE_JNI
-PRODUCT_PACKAGES += \
-    libjni_latinime
-else
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
-endif
 
 # launcher
 PRODUCT_COPY_FILES += \
@@ -118,15 +114,16 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/com.liquidsmooth.nfc.enhanced.xml:system/etc/permissions/com.liquidsmooth.nfc.enhanced.xml
 
 # version
-RELEASE = true
-LIQUID_VERSION_MAJOR = 2
-LIQUID_VERSION_MINOR = 9
+RELEASE = false
+LIQUID_VERSION_MAJOR = 3
+LIQUID_VERSION_MINOR = 0
 
+# state
 ifeq ($(RELEASE),true)
     LIQUID_VERSION_STATE := OFFICIAL
     LIQUID_VERSION := Liquid-JB-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 else
-    LIQUID_VERSION_STATE := NIGHTLY
+    LIQUID_VERSION_STATE := UNOFFICIAL
     LIQUID_VERSION := Liquid-JB-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 endif
 
@@ -138,10 +135,11 @@ ifeq ($(RELEASE),true)
         ro.goo.version=$(shell date +%Y%m%d)
 else
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.rom=liquidsmoothJB2nightly \
+        ro.goo.rom=liquidsmoothJB2unofficial \
         ro.goo.developerid=liquidsmooth \
         ro.goo.version=$(shell date +%Y%m%d)
 endif
 
+# product
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.liquid.version=$(LIQUID_VERSION)
