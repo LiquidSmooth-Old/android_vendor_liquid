@@ -14,10 +14,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false
 
-# selinux
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
-
 # packages
 PRODUCT_PACKAGES += \
     Camera \
