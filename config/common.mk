@@ -102,8 +102,7 @@ PRODUCT_COPY_FILES += \
 
 # media
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/bootanimation/$(TARGET_SCREEN_WIDTH).zip:system/media/bootanimation.zip
+    PRODUCT_BOOTANIMATION := vendor/liquid/prebuilt/common/bootanimation/$(TARGET_SCREEN_WIDTH).zip:system/media/bootanimation.zip
 endif
 
 # sip/voip
@@ -129,22 +128,23 @@ ifeq ($(RELEASE),true)
     LIQUID_VERSION_STATE := OFFICIAL
     LIQUID_VERSION := Liquid-JB-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 else
-    LIQUID_VERSION_STATE := BETA
+    LIQUID_VERSION_STATE := UNOFFICIAL
     LIQUID_VERSION := Liquid-JB-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 endif
 
 # goo.im
 ifeq ($(RELEASE),true)
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.rom=liquidsmoothJB2 \
+        ro.goo.rom=liquidsmoothJB3 \
         ro.goo.developerid=liquidsmooth \
         ro.goo.version=$(shell date +%Y%m%d)
 else
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.rom=liquidsmoothJB2unofficial \
+        ro.goo.rom=liquidsmoothJB3unofficial \
         ro.goo.developerid=liquidsmooth \
         ro.goo.version=$(shell date +%Y%m%d)
 endif
 
+# liquid version
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.liquid.version=$(LIQUID_VERSION)
