@@ -4,10 +4,6 @@ include frameworks/base/data/sounds/AllAudio.mk
 # common
 $(call inherit-product, vendor/liquid/config/common.mk)
 
-# bluetooth
-PRODUCT_COPY_FILES += \
-    system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
-
 # packages
 PRODUCT_PACKAGES += \
   Mms \
