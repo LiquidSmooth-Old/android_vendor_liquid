@@ -28,6 +28,8 @@ add_lunch_combo liquid_m7tmo-userdebug
 add_lunch_combo liquid_n7100-userdebug
 add_lunch_combo liquid_solana-userdebug
 add_lunch_combo liquid_spyder-userdebug
+add_lunch_combo liquid_t0lteatt-userdebug
+add_lunch_combo liquid_t0ltetmo-userdebug
 add_lunch_combo liquid_t0lte-userdebug
 add_lunch_combo liquid_targa-userdebug
 add_lunch_combo liquid_toro-userdebug
