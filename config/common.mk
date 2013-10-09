@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     PerformanceControl \
     Superuser \
-    Widgets \
+    BluetoothExt \
     su
 
 # prebuilts
