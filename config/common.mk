@@ -14,15 +14,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false
 
-# selinux
+# properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
-    persist.sys.root_access=1
-
-# enable adb
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif
+    dalvik.vm.debug.alloc=0 \
+    persist.sys.root_access=3
 
 # packages
 PRODUCT_PACKAGES += \
