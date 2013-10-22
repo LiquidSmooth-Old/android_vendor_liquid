@@ -46,9 +46,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LatinIME \
     LiquidPapers \
-    LockClock \
-    XposedDPI \
-    XposedInstaller
+    LockClock
 
 # telephony
 PRODUCT_PACKAGES += \
@@ -119,7 +117,6 @@ RELEASE = false
 LIQUID_VERSION_MAJOR = 2
 LIQUID_VERSION_MINOR = 21
 
-# state
 ifeq ($(RELEASE),true)
     LIQUID_VERSION_STATE := OFFICIAL
     LIQUID_VERSION := Liquid-JB-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
@@ -128,7 +125,6 @@ else
     LIQUID_VERSION := Liquid-JB-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 endif
 
-# goo.im
 ifeq ($(RELEASE),true)
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.rom=liquidsmoothJB3 \
