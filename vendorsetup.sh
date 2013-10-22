@@ -5,7 +5,6 @@ add_lunch_combo liquid_d2tmo-userdebug
 add_lunch_combo liquid_d2usc-userdebug
 add_lunch_combo liquid_d2vzw-userdebug
 add_lunch_combo liquid_grouper-userdebug
-add_lunch_combo liquid_g2-userdebug
 add_lunch_combo liquid_i605-userdebug
 add_lunch_combo liquid_i9300-userdebug
 add_lunch_combo liquid_i9305-userdebug
@@ -37,6 +36,7 @@ add_lunch_combo liquid_targa-userdebug
 add_lunch_combo liquid_toro-userdebug
 add_lunch_combo liquid_umts_spyder-userdebug
 add_lunch_combo liquid_vigor-userdebug
+add_lunch_combo liquid_vs980-userdebug
 add_lunch_combo liquid_xt897-userdebug
 add_lunch_combo liquid_xt897c-userdebug
 add_lunch_combo liquid_xt907-userdebug
