@@ -32,7 +32,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     NoiseField \
     PhaseBeam \
-    PhotoTable \
     Torch
 
 # others
