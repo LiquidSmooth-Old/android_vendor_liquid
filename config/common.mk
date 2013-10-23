@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     audio_effects.conf \
     PerformanceControl \
+    SoundRecorder \
     Superuser \
     BluetoothExt \
     su
