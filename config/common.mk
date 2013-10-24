@@ -34,21 +34,21 @@ PRODUCT_PACKAGES += \
 # others
 PRODUCT_PACKAGES += \
     Apollo \
+    BluetoothExt \
     DashClock \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf \
     PerformanceControl \
-    SoundRecorder \
-    Superuser \
-    BluetoothExt \
-    su
+    SoundRecorder
 
 # prebuilts
 PRODUCT_PACKAGES += \
     LatinIME \
     LiquidPapers \
-    LockClock
+    LockClock \
+    Superuser \
+    su
 
 # telephony
 PRODUCT_PACKAGES += \
@@ -83,6 +83,7 @@ PRODUCT_COPY_FILES += \
 
 # prebuilt
 PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
@@ -114,10 +115,14 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/com.liquidsmooth.android.xml:system/etc/permissions/com.liquidsmooth.android.xml \
     vendor/liquid/config/permissions/com.liquidsmooth.nfc.enhanced.xml:system/etc/permissions/com.liquidsmooth.nfc.enhanced.xml
 
+# superuser
+PRODUCT_COPY_FILES += \
+    vendor/liquid/proprietary/Superuser/Superuser.apk:system/app/Superuser.apk
+
 # version
 RELEASE = false
 LIQUID_VERSION_MAJOR = 2
-LIQUID_VERSION_MINOR = 23
+LIQUID_VERSION_MINOR = 24
 
 ifeq ($(RELEASE),true)
     LIQUID_VERSION_STATE := OFFICIAL
