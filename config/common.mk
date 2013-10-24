@@ -1,8 +1,5 @@
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-# superuser
-SUPERUSER_EMBEDDED := true
-
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -18,7 +15,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     dalvik.vm.debug.alloc=0 \
-    persist.sys.root_access=3
+    persist.sys.root_access=1
 
 # packages
 PRODUCT_PACKAGES += \
