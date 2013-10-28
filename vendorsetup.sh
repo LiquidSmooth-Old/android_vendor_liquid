@@ -1,7 +1,1 @@
-add_lunch_combo liquid_odin-userdebug
-add_lunch_combo liquid_togari-userdebug
-add_lunch_combo liquid_honami-userdebug
-add_lunch_combo liquid_yuga-userdebug
-add_lunch_combo liquid_pollux-userdebug
-add_lunch_combo liquid_pollux_windy-userdebug
-
+add_lunch_combo liquid_example-userdebug
