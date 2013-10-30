@@ -17,7 +17,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
-    dalvik.vm.debug.alloc=0 \
     persist.sys.root_access=3
 
 # packages
@@ -139,6 +138,5 @@ else
         ro.goo.version=$(shell date +%Y%m%d)
 endif
 
-# liquid version
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.liquid.version=$(LIQUID_VERSION)
