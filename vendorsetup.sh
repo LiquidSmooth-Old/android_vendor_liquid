@@ -6,6 +6,7 @@ add_lunch_combo liquid_d2usc-userdebug
 add_lunch_combo liquid_d2vzw-userdebug
 add_lunch_combo liquid_d800-userdebug
 add_lunch_combo liquid_d802-userdebug
+add_lunch_combo liquid_deb-userdebug
 add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_grouper-userdebug
 add_lunch_combo liquid_i605-userdebug
