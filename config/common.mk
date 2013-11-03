@@ -41,7 +41,8 @@ PRODUCT_PACKAGES += \
     SoundRecorder \
     Superuser \
     BluetoothExt \
-    su
+    su \
+    Launcher3
 
 # prebuilts
 PRODUCT_PACKAGES += \
