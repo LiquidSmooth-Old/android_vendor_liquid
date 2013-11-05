@@ -9,6 +9,7 @@ add_lunch_combo liquid_d802-userdebug
 add_lunch_combo liquid_deb-userdebug
 add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_grouper-userdebug
+add_lunch_combo liquid_hammerhead-userdebug
 add_lunch_combo liquid_i605-userdebug
 add_lunch_combo liquid_i9300-userdebug
 add_lunch_combo liquid_i9305-userdebug
