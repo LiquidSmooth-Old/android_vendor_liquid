@@ -1,7 +1,8 @@
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
-# superuser
+# liquidsmooth
 SUPERUSER_EMBEDDED := true
+PRODUCT_BRAND ?= liquidsmooth
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -19,49 +20,50 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     persist.sys.root_access=3
 
+# others
+PRODUCT_PACKAGES += \
+    Apollo \
+    DSPManager \
+    Launcher3 \
+    libcyanogen-dsp \
+    audio_effects.conf \
+    PerformanceControl \
+    SoundRecorder \
+    libemoji
+
 # packages
 PRODUCT_PACKAGES += \
+    Basic \
     Galaxy4 \
     HoloSpiralWallpaper \
     LiveWallpapers \
     LiveWallpapersPicker \
     NoiseField \
     PhaseBeam \
-    PhotoTable \
     Torch
-
-# others
-PRODUCT_PACKAGES += \
-    Apollo \
-    DashClock \
-    DSPManager \
-    libcyanogen-dsp \
-    audio_effects.conf \
-    PerformanceControl \
-    SoundRecorder \
-    Superuser \
-    BluetoothExt \
-    su \
-    Launcher3
 
 # prebuilts
 PRODUCT_PACKAGES += \
+    BluetoothExt \
     LatinIME \
-    LiquidPapers \
-    LockClock
+    LiquidPapers
+
+# superuser
+PRODUCT_PACKAGES += \
+    Superuser \
+    su
 
 # telephony
 PRODUCT_PACKAGES += \
-    CellBroadcastReceiver \
-    Provision
-    
-# theme chooser
+    CellBroadcastReceiver
+
+# themes
 PRODUCT_PACKAGES += \
     ThemeManager \
     ThemeChooser \
     com.tmobile.themes
 
-# system tools
+# system
 PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
@@ -88,56 +90,38 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
-# keyboard
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
-
-# launcher
-PRODUCT_COPY_FILES += \
-    vendor/liquid/proprietary/NovaLauncher/NovaLauncher.apk:system/app/NovaLauncher.apk
-
 # media
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
     PRODUCT_BOOTANIMATION := vendor/liquid/prebuilt/common/bootanimation/$(TARGET_SCREEN_WIDTH).zip:system/media/bootanimation.zip
 endif
-
-# sip/voip
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
-# theme chooser
-PRODUCT_COPY_FILES += \
-    vendor/liquid/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
 
 # nfc
 PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/com.liquidsmooth.android.xml:system/etc/permissions/com.liquidsmooth.android.xml \
     vendor/liquid/config/permissions/com.liquidsmooth.nfc.enhanced.xml:system/etc/permissions/com.liquidsmooth.nfc.enhanced.xml
 
+# sip/voip
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+# themes
+PRODUCT_COPY_FILES += \
+    vendor/liquid/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
+
 # version
 RELEASE = false
 LIQUID_VERSION_MAJOR = 3
 LIQUID_VERSION_MINOR = 0
 
+# release
 ifeq ($(RELEASE),true)
     LIQUID_VERSION_STATE := OFFICIAL
-    LIQUID_VERSION := Liquid-JB-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
+    LIQUID_VERSION := Liquid-Kitkat-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 else
-    LIQUID_VERSION_STATE := UNOFFICIAL
-    LIQUID_VERSION := Liquid-JB-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
-endif
-
-ifeq ($(RELEASE),true)
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.rom=liquidsmoothJB3 \
-        ro.goo.developerid=liquidsmooth \
-        ro.goo.version=$(shell date +%Y%m%d)
-else
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.rom=liquidsmoothJB3unofficial \
-        ro.goo.developerid=liquidsmooth \
-        ro.goo.version=$(shell date +%Y%m%d)
+    LIQUID_VERSION_STATE := NIGHTLY
+    LIQUID_VERSION := Liquid-Kitkat-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.liquid.version=$(LIQUID_VERSION)
+
