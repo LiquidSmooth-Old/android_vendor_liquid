@@ -7,6 +7,8 @@ add_lunch_combo liquid_d2vzw-userdebug
 add_lunch_combo liquid_d800-userdebug
 add_lunch_combo liquid_d802-userdebug
 add_lunch_combo liquid_deb-userdebug
+add_lunch_combo liquid_e970-userdebug
+add_lunch_combo liquid_e975-userdebug
 add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_grouper-userdebug
 add_lunch_combo liquid_i605-userdebug
@@ -21,6 +23,7 @@ add_lunch_combo liquid_jflteusc-userdebug
 add_lunch_combo liquid_jfltevzw-userdebug
 add_lunch_combo liquid_jfltexx-userdebug
 add_lunch_combo liquid_l900-userdebug
+add_lunch_combo liquid_ls970-userdebug
 add_lunch_combo liquid_maguro-userdebug
 add_lunch_combo liquid_mako-userdebug
 add_lunch_combo liquid_manta-userdebug
