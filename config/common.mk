@@ -67,7 +67,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
-    tune2fs
+    tune2fs \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat \
+    ntfsfix \
+    ntfs-3g \
+    sqlite3
 
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
@@ -83,12 +89,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/init.liquid.rc:root/init.liquid.rc
 
-# prebuilt
+# filesystem
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
-    vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
-    vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/liquid/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
 # media
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
@@ -99,6 +102,13 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/com.liquidsmooth.android.xml:system/etc/permissions/com.liquidsmooth.android.xml \
     vendor/liquid/config/permissions/com.liquidsmooth.nfc.enhanced.xml:system/etc/permissions/com.liquidsmooth.nfc.enhanced.xml
+
+# prebuilt
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
+    vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
+    vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # sip/voip
 PRODUCT_COPY_FILES += \
