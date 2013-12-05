@@ -47,7 +47,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BluetoothExt \
     LatinIME \
-    LiquidPapers
+    LiquidPapers \
+    LockClock
 
 # superuser
 PRODUCT_PACKAGES += \
