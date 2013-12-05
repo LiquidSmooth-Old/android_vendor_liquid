@@ -1303,6 +1303,8 @@
   <apn carrier="TrueMove-H MMS" mcc="520" mnc="00" apn="hmms" user="true" password="true" mmsc="http://mms.trueh.com:8002" mmsproxy="10.4.7.39" mmsport="8080" type="mms" />
   <apn carrier="AIS GPRS Internet" mcc="520" mnc="01" apn="internet" type="default,supl" />
   <apn carrier="AIS MMS" mcc="520" mnc="01" apn="multimedia" mmsc="http://mms.mobilelife.co.th" mmsproxy="203.170.229.34" mmsport="8080" type="mms" />
+  <apn carrier="AIS Internet" mcc="520" mnc="03" apn="internet" type="default,supl" />
+  <apn carrier="AIS MMS" mcc="520" mnc="03" apn="mms" mmsc="http://mms.ais.co.th" mmsproxy="203.170.229.34" mmsport="8080" type="mms" />
   <apn carrier="DTAC MMS" mcc="520" mnc="05" apn="mms" mmsc="http://mms2.dtac.co.th:8002" mmsproxy="10.10.10.10" mmsport="8080" type="mms" />
   <apn carrier="DTAC GPRS WEB" mcc="520" mnc="05" apn="www.dtac.co.th" type="default,supl" />
   <apn carrier="TOT 3G" mcc="520" mnc="15" apn="internet" type="default,supl" />
@@ -1521,7 +1523,4 @@
   <apn carrier="Movistar UY" mcc="748" mnc="07" apn="apnumt.movistar.com.uy" user="movistar" password="movistar" type="default,supl" />
   <apn carrier="Claro UY" mcc="748" mnc="10" apn="gprs.claro.com.uy" user="ctigpr" password="ctigpr999" type="default,supl" />
   <apn carrier="Claro UY MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.uy" mmsproxy="170.051.255.240" mmsport="9201" type="mms" />
-  <apn carrier="Movistar PA" apn="internet.movistar.pa" user="movistarpa" password="movistarpa" type="default,supl"/>
-  <apn carrier="Claro PA" apn="web.claro.com.pa" user="CLAROWEB" pass="CLAROWEB" type="default,supl" />
-  <apn carrier="Digicel PA" apn="web.digicelpanama.com" type="default,supl"/>
 </apns>
