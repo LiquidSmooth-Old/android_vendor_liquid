@@ -20,6 +20,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     persist.sys.root_access=3
 
+# ROM Statistics and ROM Identification
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.romstats.url=http://www.drdevs.com/stats/liquid\ \
+    ro.romstats.name=LiquidSmooth \
+    ro.romstats.version=$(LIQUID_VERSION) \
+    ro.romstats.askfirst=0 \
+    ro.romstats.tframe=1
+
 # others
 PRODUCT_PACKAGES += \
     Apollo \
@@ -111,6 +119,10 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+	
+# prebuilt apk
+PRODUCT_COPY_FILES += \
+vendor/liquid/prebuilt/Liquid_Stats.apk:system/app/Liquid_Stats.apk \
 
 # sip/voip
 PRODUCT_COPY_FILES += \
@@ -136,4 +148,3 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.liquid.version=$(LIQUID_VERSION)
-
