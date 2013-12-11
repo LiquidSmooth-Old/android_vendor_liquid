@@ -22,7 +22,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # ROM Statistics and ROM Identification
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.romstats.url=http://www.drdevs.com/stats/liquid\ \
+    ro.romstats.url=http://www.drdevs.com/stats/liquid/ \
     ro.romstats.name=LiquidSmooth \
     ro.romstats.version=$(LIQUID_VERSION) \
     ro.romstats.askfirst=0 \
