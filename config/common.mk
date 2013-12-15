@@ -1,8 +1,6 @@
 # liquidsmooth
-SUPERUSER_EMBEDDED := true
 PRODUCT_BRAND ?= liquidsmooth
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -59,9 +57,14 @@ PRODUCT_PACKAGES += \
     LockClock
 
 # superuser
+SUPERUSER_EMBEDDED := true
+
 PRODUCT_PACKAGES += \
     Superuser \
     su
+
+PRODUCT_COPY_FILES += \
+    external/koush/Superuser/init.superuser.rc:root/init.superuser.rc
 
 # telephony
 PRODUCT_PACKAGES += \
