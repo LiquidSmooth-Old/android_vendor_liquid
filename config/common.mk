@@ -18,14 +18,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     persist.sys.root_access=3
 
-# ROM Statistics and ROM Identification
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.romstats.url=http://www.drdevs.com/stats/liquid/ \
-    ro.romstats.name=LiquidSmooth \
-    ro.romstats.version=12/12/13 \
-    ro.romstats.askfirst=0 \
-    ro.romstats.tframe=1
-
 # others
 PRODUCT_PACKAGES += \
     Apollo \
@@ -151,3 +143,12 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.liquid.version=$(LIQUID_VERSION)
+    
+# ROM Statistics and ROM Identification
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.romstats.url=http://www.drdevs.com/stats/liquid/ \
+    ro.romstats.name=LiquidSmooth \
+    ro.romstats.version=$(LIQUID_VERSION) \
+    ro.romstats.askfirst=0 \
+    ro.romstats.tframe=1
+
