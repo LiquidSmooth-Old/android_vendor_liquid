@@ -13,6 +13,7 @@ add_lunch_combo liquid_grouper-userdebug
 add_lunch_combo liquid_hammerhead-userdebug
 add_lunch_combo liquid_hltespr-userdebug
 add_lunch_combo liquid_hltetmo-userdebug
+add_lunch_combo liquid_hltevzw-userdebug
 add_lunch_combo liquid_hltexx-userdebug
 add_lunch_combo liquid_i605-userdebug
 add_lunch_combo liquid_i9300-userdebug
