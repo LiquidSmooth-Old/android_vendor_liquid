@@ -26,6 +26,7 @@ add_lunch_combo liquid_jfltetmo-userdebug
 add_lunch_combo liquid_jflteusc-userdebug
 add_lunch_combo liquid_jfltevzw-userdebug
 add_lunch_combo liquid_jfltexx-userdebug
+add_lunch_combo liquid_ls980-userdebug
 add_lunch_combo liquid_l900-userdebug
 add_lunch_combo liquid_maguro-userdebug
 add_lunch_combo liquid_mako-userdebug
