@@ -176,6 +176,11 @@ else
     LIQUID_VERSION := LS-LP-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 endif
 
+# HFM Files
+PRODUCT_COPY_FILES += \
+	vendor/liquid/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+	vendor/liquid/prebuilt/etc/hosts.og:system/etc/hosts.og
+
 # statistics identity
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.romstats.url=http://stats.liquidsmooth.net/ \
