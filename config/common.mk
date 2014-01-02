@@ -179,6 +179,11 @@ else
     LIQUID_VERSION := LS-KK-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 endif
 
+# HFM Files
+PRODUCT_COPY_FILES += \
+	vendor/liquid/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+	vendor/liquid/prebuilt/etc/hosts.og:system/etc/hosts.og
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.liquid.version=$(LIQUID_VERSION)
 
