@@ -33,10 +33,8 @@ add_lunch_combo liquid_mako-userdebug
 add_lunch_combo liquid_manta-userdebug
 add_lunch_combo liquid_maserati-userdebug
 add_lunch_combo liquid_mb886-userdebug
-add_lunch_combo liquid_m7att-userdebug
 add_lunch_combo liquid_m7spr-userdebug
-add_lunch_combo liquid_m7tmo-userdebug
-add_lunch_combo liquid_m7ul-userdebug
+add_lunch_combo liquid_m7-userdebug
 add_lunch_combo liquid_m7vzw-userdebug
 add_lunch_combo liquid_n7100-userdebug
 add_lunch_combo liquid_n8013-userdebug
