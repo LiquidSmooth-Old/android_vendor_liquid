@@ -36,7 +36,6 @@ add_lunch_combo liquid_mb886-userdebug
 add_lunch_combo liquid_m7spr-userdebug
 add_lunch_combo liquid_m7-userdebug
 add_lunch_combo liquid_m7vzw-userdebug
-add_lunch_combo liquid_n7100-userdebug
 add_lunch_combo liquid_r950-userdebug
 add_lunch_combo liquid_solana-userdebug
 add_lunch_combo liquid_spyder-userdebug
