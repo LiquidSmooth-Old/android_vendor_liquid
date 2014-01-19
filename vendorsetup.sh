@@ -18,7 +18,6 @@ add_lunch_combo liquid_hltexx-userdebug
 add_lunch_combo liquid_i605-userdebug
 add_lunch_combo liquid_i9300-userdebug
 add_lunch_combo liquid_i9305-userdebug
-add_lunch_combo liquid_i9500-userdebug
 add_lunch_combo liquid_jflteatt-userdebug
 add_lunch_combo liquid_jfltecan-userdebug
 add_lunch_combo liquid_jfltespr-userdebug
@@ -37,7 +36,6 @@ add_lunch_combo liquid_m7spr-userdebug
 add_lunch_combo liquid_m7-userdebug
 add_lunch_combo liquid_m7vzw-userdebug
 add_lunch_combo liquid_n7100-userdebug
-add_lunch_combo liquid_r950-userdebug
 add_lunch_combo liquid_solana-userdebug
 add_lunch_combo liquid_spyder-userdebug
 add_lunch_combo liquid_t0lteatt-userdebug
