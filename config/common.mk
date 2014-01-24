@@ -114,14 +114,14 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
-	
-# prebuilt apk
-PRODUCT_COPY_FILES += \
-vendor/liquid/prebuilt/Liquid_Stats.apk:system/app/Liquid_Stats.apk \
 
 # sip/voip
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+# statistics
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/LiquidStats.apk:system/app/LiquidStats.apk \
 
 # themes
 PRODUCT_COPY_FILES += \
@@ -144,7 +144,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.liquid.version=$(LIQUID_VERSION)
     
-# ROM Statistics and ROM Identification
+# statistics identity
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.romstats.url=http://www.drdevs.com/stats/liquid/ \
     ro.romstats.name=LiquidSmooth \
