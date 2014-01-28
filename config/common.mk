@@ -51,10 +51,6 @@ PRODUCT_PACKAGES += \
 # superuser
 SUPERUSER_EMBEDDED := true
 
-# Copy latinime for gesture typing
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
-
 PRODUCT_PACKAGES += \
     Superuser \
     su
