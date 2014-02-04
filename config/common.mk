@@ -39,7 +39,8 @@ PRODUCT_PACKAGES += \
     NoiseField \
     PhaseBeam \
     PhotoTable \
-    Torch
+    Torch \
+    OmniSwitch
 
 # prebuilts
 PRODUCT_PACKAGES += \
