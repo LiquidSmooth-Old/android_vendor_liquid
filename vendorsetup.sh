@@ -19,7 +19,6 @@ add_lunch_combo liquid_maguro-userdebug
 add_lunch_combo liquid_mako-userdebug
 add_lunch_combo liquid_manta-userdebug
 add_lunch_combo liquid_maserati-userdebug
-add_lunch_combo liquid_mb886-userdebug
 add_lunch_combo liquid_meliusltexx-userdebug
 add_lunch_combo liquid_m7spr-userdebug
 add_lunch_combo liquid_m7-userdebug
@@ -34,4 +33,4 @@ add_lunch_combo liquid_umts_spyder-userdebug
 add_lunch_combo liquid_vanquish-userdebug
 add_lunch_combo liquid_vs980-userdebug
 add_lunch_combo liquid_xt897-userdebug
-add_lunch_combo liquid_xt907-userdebug
+add_lunch_combo liquid_yuga-userdebug
