@@ -3,6 +3,7 @@ add_lunch_combo liquid_d800-userdebug
 add_lunch_combo liquid_d801-userdebug
 add_lunch_combo liquid_d802-userdebug
 add_lunch_combo liquid_deb-userdebug
+add_lunch_combo liquid_dlx-userdebug
 add_lunch_combo liquid_falcon-userdebug
 add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_ghost-userdebug
