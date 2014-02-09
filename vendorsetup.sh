@@ -36,5 +36,4 @@ add_lunch_combo liquid_toro-userdebug
 add_lunch_combo liquid_umts_spyder-userdebug
 add_lunch_combo liquid_vanquish-userdebug
 add_lunch_combo liquid_vs980-userdebug
-add_lunch_combo liquid_xt897-userdebug
 add_lunch_combo liquid_yuga-userdebug
