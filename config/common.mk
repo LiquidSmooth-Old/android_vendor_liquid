@@ -125,7 +125,7 @@ PRODUCT_COPY_FILES += \
 
 # statistics
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/apps/LiquidStats.apk:system/app/LiquidStats.apk \
+    vendor/liquid/prebuilt/common/apps/LiquidStats.apk:system/app/LiquidStats.apk \
 	
 # screen recording
 PRODUCT_COPY_FILES += \
