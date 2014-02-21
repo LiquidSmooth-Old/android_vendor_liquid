@@ -129,7 +129,7 @@ PRODUCT_COPY_FILES += \
 	
 # screen recording
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/apps/ScreenRecorder.apk:system/app/ScreenRecorder.apk \
+    vendor/liquid/prebuilt/common/apps/ScreenRecorder.apk:system/app/ScreenRecorder.apk \
 
 # themes
 PRODUCT_COPY_FILES += \
