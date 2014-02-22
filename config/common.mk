@@ -50,6 +50,7 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     DashClock \
     LatinIME \
+    LiquidPapers \
     LockClock
 
 # superuser
