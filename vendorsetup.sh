@@ -9,6 +9,7 @@ add_lunch_combo liquid_falcon-userdebug
 add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_grouper-userdebug
 add_lunch_combo liquid_hammerhead-userdebug
+add_lunch_combo liquid_hayabusa-userdebug
 add_lunch_combo liquid_hlte-userdebug
 add_lunch_combo liquid_honami-userdebug
 add_lunch_combo liquid_huashan-userdebug
@@ -37,6 +38,7 @@ add_lunch_combo liquid_solana-userdebug
 add_lunch_combo liquid_spyder-userdebug
 add_lunch_combo liquid_t0lte-userdebug
 add_lunch_combo liquid_targa-userdebug
+add_lunch_combo liquid_tsubasa-userdebug
 add_lunch_combo liquid_togari_gpe-userdebug
 add_lunch_combo liquid_togari-userdebug
 add_lunch_combo liquid_toro-userdebug
