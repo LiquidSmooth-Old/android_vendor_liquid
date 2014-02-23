@@ -28,6 +28,7 @@ add_lunch_combo liquid_mint-userdebug
 add_lunch_combo liquid_m7spr-userdebug
 add_lunch_combo liquid_m7-userdebug
 add_lunch_combo liquid_m7vzw-userdebug
+add_lunch_combo liquid_moto_msm8960-userdebug
 add_lunch_combo liquid_moto_msm8960dt-userdebug
 add_lunch_combo liquid_n7100-userdebug
 add_lunch_combo liquid_odin-userdebug
@@ -43,6 +44,5 @@ add_lunch_combo liquid_togari_gpe-userdebug
 add_lunch_combo liquid_togari-userdebug
 add_lunch_combo liquid_toro-userdebug
 add_lunch_combo liquid_umts_spyder-userdebug
-add_lunch_combo liquid_vanquish-userdebug
 add_lunch_combo liquid_vs980-userdebug
 add_lunch_combo liquid_yuga-userdebug
