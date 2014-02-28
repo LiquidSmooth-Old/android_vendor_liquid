@@ -133,9 +133,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/apps/LiquidStats.apk:system/app/LiquidStats.apk \
 	
-# screen recording
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/apps/ScreenRecorder.apk:system/app/ScreenRecorder.apk \
+
 
 # themes
 PRODUCT_COPY_FILES += \
