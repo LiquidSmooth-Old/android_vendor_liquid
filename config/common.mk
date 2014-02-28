@@ -72,6 +72,11 @@ PRODUCT_PACKAGES += \
     ThemeManager \
     ThemeChooser \
     com.tmobile.themes
+    
+# Screen recorder
+PRODUCT_PACKAGES += \
+    ScreenRecorder \
+    libscreenrecorder
 
 # system
 PRODUCT_PACKAGES += \
