@@ -44,6 +44,7 @@ add_lunch_combo liquid_tsubasa-userdebug
 add_lunch_combo liquid_togari_gpe-userdebug
 add_lunch_combo liquid_togari-userdebug
 add_lunch_combo liquid_toro-userdebug
+add_lunch_combo liquid_toroplus-userdebug
 add_lunch_combo liquid_umts_spyder-userdebug
 add_lunch_combo liquid_vs980-userdebug
 add_lunch_combo liquid_yuga-userdebug
