@@ -163,4 +163,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.romstats.version=$(LIQUID_VERSION) \
     ro.romstats.askfirst=0 \
     ro.romstats.tframe=1
+    
+# OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    otaupdater.otatime=$(shell date +%Y%m%d)-0001 \
+    otaupdater.otaver=3.0-$(shell date +%Y%m%d)
 
