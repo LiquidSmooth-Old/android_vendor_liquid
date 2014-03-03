@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     PhotoTable \
     Torch \
-    OmniSwitch
+    OmniSwitch \
+    OTAUpdateCenter
 
 # prebuilts
 PRODUCT_PACKAGES += \
