@@ -1,4 +1,3 @@
-add_lunch_combo liquid_c1905-userdebug
 add_lunch_combo liquid_d2lte-userdebug
 add_lunch_combo liquid_d800-userdebug
 add_lunch_combo liquid_d801-userdebug
@@ -32,6 +31,7 @@ add_lunch_combo liquid_m7vzw-userdebug
 add_lunch_combo liquid_moto_msm8960-userdebug
 add_lunch_combo liquid_moto_msm8960dt-userdebug
 add_lunch_combo liquid_n7100-userdebug
+add_lunch_combo liquid_nicki-userdebug
 add_lunch_combo liquid_odin-userdebug
 add_lunch_combo liquid_pollux-userdebug
 add_lunch_combo liquid_pollux_windy-userdebug
