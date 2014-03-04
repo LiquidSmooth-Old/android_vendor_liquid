@@ -97,9 +97,21 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 # dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 
+
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/liquid/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/liquid/prebuilt/common/bin/50-tg.sh:system/addon.d/50-tg.sh \
+    vendor/liquid/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+
 # bin
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/bin/sysinit:system/bin/sysinit
+
+# userinit support
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # etc
 PRODUCT_COPY_FILES += \
