@@ -36,6 +36,7 @@ add_lunch_combo liquid_nicki-userdebug
 add_lunch_combo liquid_odin-userdebug
 add_lunch_combo liquid_pollux-userdebug
 add_lunch_combo liquid_pollux_windy-userdebug
+add_lunch_combo liquid_shooter-userdebug
 add_lunch_combo liquid_shooteru-userdebug
 add_lunch_combo liquid_solana-userdebug
 add_lunch_combo liquid_spyder-userdebug
