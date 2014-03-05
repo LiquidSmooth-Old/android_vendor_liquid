@@ -17,6 +17,7 @@ add_lunch_combo liquid_huashan-userdebug
 add_lunch_combo liquid_i605-userdebug
 add_lunch_combo liquid_i9300-userdebug
 add_lunch_combo liquid_i9305-userdebug
+add_lunch_combo liquid_i9500-userdebug
 add_lunch_combo liquid_jflte-userdebug
 add_lunch_combo liquid_ls980-userdebug
 add_lunch_combo liquid_l900-userdebug
