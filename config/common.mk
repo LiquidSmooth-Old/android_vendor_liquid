@@ -102,7 +102,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/liquid/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/liquid/prebuilt/common/bin/50-tg.sh:system/addon.d/50-tg.sh \
+    vendor/liquid/prebuilt/common/bin/50-liquid.sh:system/addon.d/50-liquid.sh \
     vendor/liquid/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 # bin
