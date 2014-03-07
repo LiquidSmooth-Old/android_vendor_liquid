@@ -45,7 +45,8 @@ PRODUCT_PACKAGES += \
     Torch \
     OmniSwitch \
     OTAUpdateCenter \
-    CMStats
+    CMStats \
+    KernelTweaker
 	
 
 # prebuilts
