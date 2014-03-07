@@ -44,7 +44,9 @@ PRODUCT_PACKAGES += \
     PhotoTable \
     Torch \
     OmniSwitch \
-    OTAUpdateCenter
+    OTAUpdateCenter \
+    CMStats
+	
 
 # prebuilts
 PRODUCT_PACKAGES += \
@@ -141,13 +143,7 @@ PRODUCT_COPY_FILES += \
 # sip/voip
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
-# statistics
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/apps/LiquidStats.apk:system/app/LiquidStats.apk \
 	
-
-
 # themes
 PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
