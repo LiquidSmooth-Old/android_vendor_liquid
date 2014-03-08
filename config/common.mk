@@ -45,9 +45,8 @@ PRODUCT_PACKAGES += \
     Torch \
     OmniSwitch \
     OTAUpdateCenter \
-    CMStats \
+    LiquidStats \
     KernelTweaker
-	
 
 # prebuilts
 PRODUCT_PACKAGES += \
@@ -100,7 +99,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 # dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
@@ -144,7 +142,7 @@ PRODUCT_COPY_FILES += \
 # sip/voip
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-	
+
 # themes
 PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
@@ -178,4 +176,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     otaupdater.otatime=$(shell date +%Y%m%d)-0001 \
     otaupdater.otaver=3.0-$(shell date +%Y%m%d)
-
