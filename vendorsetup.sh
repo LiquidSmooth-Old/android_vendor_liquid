@@ -11,6 +11,7 @@ add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_grouper-userdebug
 add_lunch_combo liquid_hammerhead-userdebug
 add_lunch_combo liquid_hayabusa-userdebug
+add_lunch_combo liquid_hercules-userdebug
 add_lunch_combo liquid_honami-userdebug
 add_lunch_combo liquid_huashan-userdebug
 add_lunch_combo liquid_i9300-userdebug
