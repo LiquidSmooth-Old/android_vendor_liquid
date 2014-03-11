@@ -40,6 +40,7 @@ add_lunch_combo liquid_shooter-userdebug
 add_lunch_combo liquid_shooteru-userdebug
 add_lunch_combo liquid_solana-userdebug
 add_lunch_combo liquid_spyder-userdebug
+add_lunch_combo liquid_skyrocket-userdebug
 add_lunch_combo liquid_t0lte-userdebug
 add_lunch_combo liquid_targa-userdebug
 add_lunch_combo liquid_tsubasa-userdebug
