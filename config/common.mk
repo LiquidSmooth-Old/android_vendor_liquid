@@ -21,18 +21,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Tether for all
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
-# others
-PRODUCT_PACKAGES += \
-    Apollo \
-    DSPManager \
-    Launcher3 \
-    libcyanogen-dsp \
-    audio_effects.conf \
-    PerformanceControl \
-    SoundRecorder \
-    libemoji
-
-# packages
+# Wallpapers
 PRODUCT_PACKAGES += \
     Basic \
     Galaxy4 \
@@ -41,20 +30,31 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     NoiseField \
     PhaseBeam \
-    PhotoTable \
+    PhotoTable 
+    
+# Cm Related Apps
+PRODUCT_PACKAGES += \
+    Apollo \
+    DSPManager \
+    libcyanogen-dsp \
+    audio_effects.conf \
+    SoundRecorder \
+    libemoji \
     Torch \
+    LockClock \
+    BluetoothExt
+
+# Liquid, Slim, Omni Apps
+PRODUCT_PACKAGES += \
+    Launcher3 \
+    DashClock \
+    DeskClock \
+    LatinIME \
     OmniSwitch \
+    LiquidPapers \
     OTAUpdateCenter \
     LiquidStats \
-    KernelTweaker
-
-# prebuilts
-PRODUCT_PACKAGES += \
-    BluetoothExt \
-    DashClock \
-    LatinIME \
-    LiquidPapers \
-    LockClock
+    KernelTweaker 
 
 # superuser
 SUPERUSER_EMBEDDED := true
