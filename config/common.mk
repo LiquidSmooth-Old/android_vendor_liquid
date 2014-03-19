@@ -50,6 +50,7 @@ PRODUCT_PACKAGES += \
     DashClock \
     DeskClock \
     LatinIME \
+    ChameleonEngine \
     OmniSwitch \
     LiquidPapers \
     OTAUpdateCenter \
