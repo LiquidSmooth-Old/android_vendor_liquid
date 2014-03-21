@@ -51,7 +51,6 @@ PRODUCT_PACKAGES += \
     DeskClock \
     Calendar \
     LatinIME \
-    ChameleonEngine \
     OmniSwitch \
     LiquidPapers \
     LiquidFileManager \
