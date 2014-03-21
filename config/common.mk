@@ -49,13 +49,14 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     DashClock \
     DeskClock \
-	Calendar \
+    Calendar \
     LatinIME \
     ChameleonEngine \
     OmniSwitch \
     LiquidPapers \
-    OTAUpdateCenter \
+    LiquidFileManager \
     LiquidStats \
+    OTAUpdateCenter \
     KernelTweaker 
 
 # superuser
