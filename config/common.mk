@@ -49,6 +49,7 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     DashClock \
     DeskClock \
+	Calendar \
     LatinIME \
     ChameleonEngine \
     OmniSwitch \
