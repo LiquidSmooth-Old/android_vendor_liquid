@@ -33,7 +33,4 @@
         <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService$Receiver</item>
     </string-array>
 
-    <!-- Device supports LED flashlight -->
-    <bool name="config_enableTorch">true</bool>
-
 </resources>
