@@ -109,6 +109,10 @@ TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -b 8-`
 echo $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
 OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
 
+# Add changelog
+. $ANDROID_BUILD_TOP/vendor/liquid/tools/changelog
+
+
 # Pack it up and sign
 printf "Zipping package..."
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
