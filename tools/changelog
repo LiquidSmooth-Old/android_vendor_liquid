@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Exports
-export Changelog=changelog.txt
+export Changelog=Changelog.txt
 
 if [ -f $Changelog ];
 then
@@ -28,6 +28,6 @@ k=$(expr $i - 1)
 	echo >> $Changelog;
 done
 
-# Let squisher handle the zipping part
-cp $Changelog $OUT/repack.d/ota/
+cp $Changelog $OUT/
+cp $Changelog $OUT/repack.d/ota/system/etc/
 
