@@ -18,6 +18,7 @@ add_lunch_combo liquid_hammerhead-userdebug
 add_lunch_combo liquid_hayabusa-userdebug
 add_lunch_combo liquid_hercules-userdebug
 add_lunch_combo liquid_honami-userdebug
+add_lunch_combo liquid_hlte-userdebug
 add_lunch_combo liquid_huashan-userdebug
 add_lunch_combo liquid_i605-userdebug
 add_lunch_combo liquid_i9300-userdebug
@@ -35,6 +36,9 @@ add_lunch_combo liquid_mint-userdebug
 add_lunch_combo liquid_m7spr-userdebug
 add_lunch_combo liquid_m7-userdebug
 add_lunch_combo liquid_m7vzw-userdebug
+add_lunch_combo liquid_m8spr-userdebug
+add_lunch_combo liquid_m8-userdebug
+add_lunch_combo liquid_m8vzw-userdebug
 add_lunch_combo liquid_moto_msm8960-userdebug
 add_lunch_combo liquid_moto_msm8960dt-userdebug
 add_lunch_combo liquid_n7100-userdebug
