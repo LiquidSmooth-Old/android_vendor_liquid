@@ -1,4 +1,5 @@
 add_lunch_combo liquid_amami-userdebug
+add_lunch_combo liquid_codina-userdebug
 add_lunch_combo liquid_d2lte-userdebug
 add_lunch_combo liquid_d800-userdebug
 add_lunch_combo liquid_d801-userdebug
@@ -24,6 +25,7 @@ add_lunch_combo liquid_i605-userdebug
 add_lunch_combo liquid_i9300-userdebug
 add_lunch_combo liquid_i9305-userdebug
 add_lunch_combo liquid_i9500-userdebug
+add_lunch_combo liquid_janice-userdebug
 add_lunch_combo liquid_jflte-userdebug
 add_lunch_combo liquid_ls980-userdebug
 add_lunch_combo liquid_l900-userdebug
