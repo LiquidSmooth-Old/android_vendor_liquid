@@ -22,8 +22,11 @@ add_lunch_combo liquid_i9305-userdebug
 add_lunch_combo liquid_i9500-userdebug
 add_lunch_combo liquid_janice-userdebug
 add_lunch_combo liquid_jflte-userdebug
-add_lunch_combo liquid_ls980-userdebug
 add_lunch_combo liquid_l900-userdebug
+add_lunch_combo liquid_ls980-userdebug
+add_lunch_combo liquid_lt01lte-userdebug
+add_lunch_combo liquid_lt013g-userdebug
+add_lunch_combo liquid_lt01wifi-userdebug
 add_lunch_combo liquid_maguro-userdebug
 add_lunch_combo liquid_mako-userdebug
 add_lunch_combo liquid_manta-userdebug
