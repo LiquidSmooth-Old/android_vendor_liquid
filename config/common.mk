@@ -46,7 +46,6 @@ PRODUCT_PACKAGES += \
 
 # Liquid, Slim, Omni Apps
 PRODUCT_PACKAGES += \
-    Launcher3 \
     DashClock \
     DeskClock \
     Calendar \
