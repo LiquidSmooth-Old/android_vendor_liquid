@@ -70,6 +70,10 @@ PRODUCT_COPY_FILES += \
 # telephony
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
+	
+# Inspire Launcher
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/app/inspirelauncher.apk:system/app/inspirelauncher.apk \
 
 # themes
 PRODUCT_PACKAGES += \
