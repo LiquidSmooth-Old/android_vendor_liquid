@@ -75,11 +75,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/app/inspirelauncher.apk:system/app/inspirelauncher.apk \
 
-# themes
+# Theme engine
 PRODUCT_PACKAGES += \
-    ThemeManager \
     ThemeChooser \
-    com.tmobile.themes
+    ThemesProvider
     
 # Screen recorder
 PRODUCT_PACKAGES += \
@@ -146,7 +145,8 @@ PRODUCT_COPY_FILES += \
 
 # themes
 PRODUCT_COPY_FILES += \
-    vendor/liquid/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
+    vendor/liquid/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml \
+    vendor/liquid/config/permissions/org.cyanogenmod.theme.xml:system/etc/permissions/org.cyanogenmod.theme.xml
 
 # version
 RELEASE = false
