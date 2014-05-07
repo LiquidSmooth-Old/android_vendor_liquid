@@ -21,6 +21,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Tether for all
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
+# Stagefright FFMPEG plugin
+PRODUCT_PACKAGES += \
+    libstagefright_soft_ffmpegadec.so \
+    libstagefright_soft_ffmpegvdec.so \
+    libFFmpegExtractor.so \
+    libnamparser.so
+
 # Wallpapers
 PRODUCT_PACKAGES += \
     Basic \
