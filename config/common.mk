@@ -156,7 +156,7 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/org.cyanogenmod.theme.xml:system/etc/permissions/org.cyanogenmod.theme.xml
 
 # version
-RELEASE = false
+RELEASE = true
 LIQUID_VERSION_MAJOR = 3
 LIQUID_VERSION_MINOR = 0
 
