@@ -8,9 +8,8 @@ add_lunch_combo liquid_deb-userdebug
 add_lunch_combo liquid_dlx-userdebug
 add_lunch_combo liquid_falcon-userdebug
 add_lunch_combo liquid_flo-userdebug
+add_lunch_combo liquid_gee-userdebug
 add_lunch_combo liquid_geeb-userdebug
-add_lunch_combo liquid_geehrc-userdebug
-add_lunch_combo liquid_geespr-userdebug
 add_lunch_combo liquid_grouper-userdebug
 add_lunch_combo liquid_hammerhead-userdebug
 add_lunch_combo liquid_hercules-userdebug
