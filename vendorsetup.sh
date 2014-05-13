@@ -1,3 +1,4 @@
+add_lunch_combo liquid_acclaim-userdebug
 add_lunch_combo liquid_codina-userdebug
 add_lunch_combo liquid_d2lte-userdebug
 add_lunch_combo liquid_d800-userdebug
