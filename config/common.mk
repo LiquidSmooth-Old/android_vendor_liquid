@@ -62,7 +62,8 @@ PRODUCT_PACKAGES += \
     LiquidFileManager \
     LiquidStats \
     OTAUpdateCenter \
-    KernelTweaker 
+    KernelTweaker \
+    LiquidSetupWizard
 
 # superuser
 SUPERUSER_EMBEDDED := true
