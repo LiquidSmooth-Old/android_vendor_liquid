@@ -82,10 +82,6 @@ PRODUCT_PACKAGES += \
 # Inspire Launcher
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/app/inspirelauncher.apk:system/app/inspirelauncher.apk
-	
-# Voice Wakeup
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/app/VoiceWakeup.apk:system/app/VoiceWakeup.apk
 
 # Theme engine
 PRODUCT_PACKAGES += \
