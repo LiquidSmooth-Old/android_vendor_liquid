@@ -6,8 +6,8 @@ $(call inherit-product, vendor/liquid/config/common.mk)
 
 # ringtones
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.notification_sound=Proxima.ogg \
-    ro.config.alarm_alert=Cesium.ogg
+    ro.config.notification_sound=Argon.ogg \
+    ro.config.alarm_alert=Hassium.ogg
 
 # media
 ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))

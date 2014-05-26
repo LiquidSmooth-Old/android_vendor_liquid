@@ -18,6 +18,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     persist.sys.root_access=3
 
+# CM Theme Engine
+include vendor/liquid/config/themes_common.mk
+	
 # Tether for all
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
@@ -27,67 +30,43 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_ffmpegvdec \
     libFFmpegExtractor \
     libnamparser
-
-# Wallpapers
+	
+# Core Apps
 PRODUCT_PACKAGES += \
-    Basic \
-    Galaxy4 \
-    HoloSpiralWallpaper \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    NoiseField \
-    PhaseBeam \
-    PhotoTable 
-    
-# Cm Related Apps
-PRODUCT_PACKAGES += \
-    Apollo \
-    DSPManager \
-    libcyanogen-dsp \
     audio_effects.conf \
-    SoundRecorder \
+    BluetoothExt \
+    Calendar \
+    CellBroadcastReceiver \
+    LatinIME \
+    libcyanogen-dsp \
     libemoji \
-    Torch \
     LockClock \
-    BluetoothExt
+    SoundRecorder \
+    Torch
 
-# Liquid, Slim, Omni Apps
+# Extras for Liquid
 PRODUCT_PACKAGES += \
     DashClock \
     DeskClock \
-    Calendar \
-    LatinIME \
-    OmniSwitch \
-    LiquidPapers \
-    LiquidFileManager \
-    LiquidStats \
-    OTAUpdateCenter \
+    DSPManager \
     KernelTweaker \
-    LiquidSetupWizard
+    LiquidFileManager \
+    LiquidLaunch \
+    LiquidPapers \
+    LiquidStats \
+    LiquidUpdater \
+    OmniSwitch
 
 # superuser
 SUPERUSER_EMBEDDED := true
 
 PRODUCT_PACKAGES += \
-    Superuser \
-    su
+    su \
+    Superuser
 
 PRODUCT_COPY_FILES += \
     external/koush/Superuser/init.superuser.rc:root/init.superuser.rc
 
-# telephony
-PRODUCT_PACKAGES += \
-    CellBroadcastReceiver
-	
-# Inspire Launcher
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/app/inspirelauncher.apk:system/app/inspirelauncher.apk
-
-# Theme engine
-PRODUCT_PACKAGES += \
-    ThemeChooser \
-    ThemesProvider
-    
 # Screen recorder
 PRODUCT_PACKAGES += \
     ScreenRecorder \
@@ -151,11 +130,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-# themes
-PRODUCT_COPY_FILES += \
-    vendor/liquid/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml \
-    vendor/liquid/config/permissions/org.cyanogenmod.theme.xml:system/etc/permissions/org.cyanogenmod.theme.xml
-
 # version
 RELEASE = false
 LIQUID_VERSION_MAJOR = 3
@@ -180,8 +154,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.romstats.version=$(LIQUID_VERSION) \
     ro.romstats.askfirst=0 \
     ro.romstats.tframe=1
-    
-# OTA
-PRODUCT_PROPERTY_OVERRIDES += \
-    otaupdater.otatime=$(shell date +%Y%m%d)-0001 \
-    otaupdater.otaver=3.0-$(shell date +%Y%m%d)
