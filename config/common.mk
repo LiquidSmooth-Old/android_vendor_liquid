@@ -184,4 +184,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # OTA
 PRODUCT_PROPERTY_OVERRIDES += \
     otaupdater.otatime=$(shell date +%Y%m%d)-0001 \
-    otaupdater.otaver=3.0-$(shell date +%Y%m%d)
+    otaupdater.otaver=3.1-$(shell date +%Y%m%d)
