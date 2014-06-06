@@ -141,7 +141,6 @@ TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -b 8-`
 echo -e ${grn}"MODVERSION: $MODVERSION"${txtrst}
 OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
 ABIGEN=`grep 'ro.product.cpu.abi=' $REPACK/ota/system/build.prop | sed -e 's/ro.product.cpu.abi=//g'`
-OUTFILE=$OUT/$MODVERSION.zip
 
 if [ -n $ABIGEN ]; then
 	echo ${cya}"Packing in Pre-Built Libs for CPU Variant:${ylw}$ABIGEN"${txtrst}
