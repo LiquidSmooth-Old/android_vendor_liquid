@@ -37,7 +37,6 @@ PRODUCT_PACKAGES += \
     libnamparser
 
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/liquid/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/liquid/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
     vendor/liquid/prebuilt/common/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
