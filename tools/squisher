@@ -163,31 +163,31 @@ java -Xmx1024m \
 echo -e ${grn}"Cleaning up..."${txtrst}
 rm -rf $REPACK
 
+# get current version
+eval $(grep "^LIQUID_VERSION_" vendor/liquid/config/common.mk | sed 's/ *//g')
+VERSION="$LIQUID_VERSION_MAJOR.$LIQUID_VERSION_MINOR.$LIQUID_VERSION_MAINTENANCE"
+
 # Create a md5 checksum image of the repacked package
 (
 img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}'`
+echo -e ""
+echo -e ${ppl}"       __                        _______                      __  __ " 
+echo -e "      / /   __ ___  __  __ _ ___/ / ___/ ___ ____  ___  ___  / /_/ /_ "
+echo -e "     / /   / / __ '/ / / / / __  /\__  \/ __' __ \/__ \/__ \/ __/ __ \ "
+echo -e "    / /___/ / /_/ / /_/ / / /_/ /___/  / / / / / //_/ //_/ / /_/ / / / "
+echo -e "   /_____/_/\__, /\__,_/_/\__,_//____ /_/ /_/ /_/\___/\___/\__/_/ /_/ "
+echo -e "              /_/       "${txtrst} ${cya}"Liquid-Kitkat v-$VERSION"
+echo -e "                                $TARGET_PRODUCT_FINAL"${txtrst}
+echo -e ""
 echo -e ""; echo -e ${cya}"Package complete:${ylw} $OUTFILE"${txtrst}
 echo -e ${cya}"ZIP:${ylw}  $img"${txtrst}
 echo -e ${cya}"MD5: ${ylw} `cat $img.md5sum | awk '{print $1}'`"${txtrst}
 echo -e ${cya}"SIZE:${ylw} $ZIPSIZE"${txtrst}
 MD5VAL=`cat $img.md5sum  | awk '{ print $1 }'`
 DEVICE=`echo -e $TARGET_PRODUCT | cut -d "_" -f 2`
-
-echo -e ""
-echo -e ${bldylw}"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
-echo -e "     \ )        (          )\ ) )\ )          "
-echo -e "     (()/  (   ( )\     (  (()/((()/(         "
-echo -e "     (_)) ((_) (_)_)   /((_)(_)) (_))         "
-echo -e "     | |   (_) / _ \ (_))( |_ _| |   \        "
-echo -e "     | |__ | || (_) || || | | |  | |) |       "
-echo -e "     |____||_| \__\_\ \_,_||___| |___/        "
-echo -e "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
-echo -e "          <%%% Liquid-Kitkat %%%>             "
-echo -e "         <%%% By LiquidSmooth %%%>            "
-echo -e "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"${txtrst}
 echo -e ""
 )
 
