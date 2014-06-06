@@ -20,7 +20,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # CM Theme Engine
 include vendor/liquid/config/themes_common.mk
-	
+
 # Tether for all
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
@@ -30,7 +30,7 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_ffmpegvdec \
     libFFmpegExtractor \
     libnamparser
-	
+
 # Core Apps
 PRODUCT_PACKAGES += \
     audio_effects.conf \
@@ -54,8 +54,7 @@ PRODUCT_PACKAGES += \
     Liquid-Launch \
     LiquidPapers \
     LiquidStats \
-    LiquidUpdater \
-    OmniSwitch
+    LiquidUpdater
 
 # superuser
 SUPERUSER_EMBEDDED := true
@@ -146,7 +145,7 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.liquid.version=$(LIQUID_VERSION)
-    
+
 # statistics identity
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.romstats.url=http://www.drdevs.com/stats/liquid/ \
