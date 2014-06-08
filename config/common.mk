@@ -85,7 +85,7 @@ PRODUCT_PACKAGES += \
     DSPManager \
     KernelTweaker \
     LiquidFileManager \
-    Liquid-Launch \
+    LiquidLauncher \
     LiquidPapers \
     LiquidStats \
     LiquidUpdater
