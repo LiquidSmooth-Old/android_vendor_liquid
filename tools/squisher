@@ -156,6 +156,7 @@ fi
 
 # Add changelog
 . $ANDROID_BUILD_TOP/vendor/liquid/tools/changelog
+mv $OUT/Changelog.txt $OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.txt
 
 # Pack it up and sign
 echo -e ${grn}"Zipping package..."${txtrst}
@@ -198,3 +199,4 @@ echo -e ""
 )
 
 exit 0
+
