@@ -74,6 +74,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     libcyanogen-dsp \
     libemoji \
+    LiveWallpapersPicker \
     LockClock \
     SoundRecorder \
     Torch
