@@ -194,6 +194,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     pm.sleep.mode=1 \
     wifi.supplicant_scan_interval=180 \
+    windowsmgr.max_events_per_sec=150 \
     net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960 \
     net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960 \
     net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960 \
