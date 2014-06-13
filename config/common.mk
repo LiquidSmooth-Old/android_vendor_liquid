@@ -18,6 +18,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     persist.sys.root_access=3
 
+# CM Theme Engine
+include vendor/liquid/config/themes_common.mk
+
+# Added xbin files
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/xbin/zip:system/xbin/zip \
+    vendor/liquid/prebuilt/common/xbin/zipalign:system/xbin/zipalign
+
 # Tether for all
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
@@ -28,66 +36,72 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     libnamparser
 
-# Wallpapers
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
+    vendor/liquid/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
+    vendor/liquid/prebuilt/common/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
+    vendor/liquid/prebuilt/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
+    vendor/liquid/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
+    vendor/liquid/prebuilt/common/etc/init.d/05freemem:system/etc/init.d/05freemem \
+    vendor/liquid/prebuilt/common/etc/init.d/06removecache:system/etc/init.d/06removecache \
+    vendor/liquid/prebuilt/common/etc/init.d/07fixperms:system/etc/init.d/07fixperms \
+    vendor/liquid/prebuilt/common/etc/init.d/09cron:system/etc/init.d/09cron \
+    vendor/liquid/prebuilt/common/etc/init.d/10sdboost:system/etc/init.d/10sdboost \
+    vendor/liquid/prebuilt/common/etc/init.d/11battery:system/etc/init.d/11battery \
+    vendor/liquid/prebuilt/common/etc/init.d/12touch:system/etc/init.d/12touch \
+    vendor/liquid/prebuilt/common/etc/init.d/13minfree:system/etc/init.d/13minfree \
+    vendor/liquid/prebuilt/common/etc/init.d/14gpurender:system/etc/init.d/14gpurender \
+    vendor/liquid/prebuilt/common/etc/init.d/15sleepers:system/etc/init.d/15sleepers \
+    vendor/liquid/prebuilt/common/etc/init.d/16journalism:system/etc/init.d/16journalism \
+    vendor/liquid/prebuilt/common/etc/init.d/17sqlite3:system/etc/init.d/17sqlite3 \
+    vendor/liquid/prebuilt/common/etc/init.d/18wifisleep:system/etc/init.d/18wifisleep \
+    vendor/liquid/prebuilt/common/etc/init.d/19iostats:system/etc/init.d/19iostats \
+    vendor/liquid/prebuilt/common/etc/init.d/20setrenice:system/etc/init.d/20setrenice \
+    vendor/liquid/prebuilt/common/etc/init.d/21tweaks:system/etc/init.d/21tweaks \
+    vendor/liquid/prebuilt/common/etc/init.d/24speedy_modified:system/etc/init.d/24speedy_modified \
+    vendor/liquid/prebuilt/common/etc/init.d/25loopy_smoothness_tweak:system/etc/init.d/25loopy_smoothness_tweak \
+    vendor/liquid/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
+    vendor/liquid/prebuilt/common/etc/helpers.sh:system/etc/helpers.sh \
+    vendor/liquid/prebuilt/common/etc/init.d.cfg:system/etc/init.d.cfg \
+    vendor/liquid/prebuilt/common/bin/sysinit:system/bin/sysinit
+
+# Core Apps
 PRODUCT_PACKAGES += \
-    Basic \
-    Galaxy4 \
-    HoloSpiralWallpaper \
-    LiveWallpapers \
+    audio_effects.conf \
+    BluetoothExt \
+    Calendar \
+    CellBroadcastReceiver \
+    LatinIME \
+    libcyanogen-dsp \
+    libemoji \
     LiveWallpapersPicker \
-    NoiseField \
-    PhaseBeam \
-    PhotoTable 
-    
-# Cm Related Apps
+    LockClock \
+    SoundRecorder \
+    Torch
+
+# Extras for Liquid
 PRODUCT_PACKAGES += \
     Apollo \
-    DSPManager \
-    libcyanogen-dsp \
-    audio_effects.conf \
-    SoundRecorder \
-    libemoji \
-    Torch \
-    LockClock \
-    BluetoothExt
-
-# Liquid, Slim, Omni Apps
-PRODUCT_PACKAGES += \
     DashClock \
     DeskClock \
-    Calendar \
-    LatinIME \
-    OmniSwitch \
-    LiquidPapers \
-    LiquidFileManager \
-    LiquidStats \
-    OTAUpdateCenter \
+    DSPManager \
     KernelTweaker \
-    LiquidSetupWizard
+    LiquidFileManager \
+    LiquidLauncher \
+    LiquidPapers \
+    LiquidStats \
+    LiquidUpdater
 
 # superuser
 SUPERUSER_EMBEDDED := true
 
 PRODUCT_PACKAGES += \
-    Superuser \
-    su
+    su \
+    Superuser
 
 PRODUCT_COPY_FILES += \
     external/koush/Superuser/init.superuser.rc:root/init.superuser.rc
 
-# telephony
-PRODUCT_PACKAGES += \
-    CellBroadcastReceiver
-	
-# Inspire Launcher
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/app/inspirelauncher.apk:system/app/inspirelauncher.apk
-
-# Theme engine
-PRODUCT_PACKAGES += \
-    ThemeChooser \
-    ThemesProvider
-    
 # Screen recorder
 PRODUCT_PACKAGES += \
     ScreenRecorder \
@@ -151,11 +165,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-# themes
-PRODUCT_COPY_FILES += \
-    vendor/liquid/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml \
-    vendor/liquid/config/permissions/org.cyanogenmod.theme.xml:system/etc/permissions/org.cyanogenmod.theme.xml
-
 # version
 RELEASE = false
 LIQUID_VERSION_MAJOR = 3
@@ -172,8 +181,12 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.liquid.version=$(LIQUID_VERSION)
-    
-# OTA
+
 PRODUCT_PROPERTY_OVERRIDES += \
-    otaupdater.otatime=$(shell date +%Y%m%d)-0001 \
-    otaupdater.otaver=3.0-$(shell date +%Y%m%d)
+    pm.sleep.mode=1 \
+    wifi.supplicant_scan_interval=180 \
+    net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960 \
+    net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960 \
+    net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960 \
+    net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960 \
+    net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960

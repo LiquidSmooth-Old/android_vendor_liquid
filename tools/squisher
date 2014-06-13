@@ -1,9 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Squish a CM otapackage for distribution
 # cyanogen
 #
-. $ANDROID_BUILD_TOP/vendor/liquid/tools/functions
+
+. $ANDROID_BUILD_TOP/vendor/liquid/tools/colors
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
@@ -20,7 +21,21 @@ else
 fi
 
 if [ -z "$OUT" -o ! -d "$OUT" ]; then
-	echo $CL_RED"ERROR: $0 only works with a full build environment. $OUT should exist."$CL_RST
+	echo -e ${red}"ERROR: $0 only works with a full build environment. $OUT should exist."${txtrst}
+	exit 1
+fi
+
+if [ "$TARGET_BUILD_TYPE" = "debug" ]; then
+    OTAPACKAGE=$OUT/${TARGET_PRODUCT}_debug-ota-eng.$USER.zip
+elif [ "$TARGET_BUILD_VARIANT" = "userdebug" ]; then
+    OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-userdebug.$USER.zip
+elif [ "$TARGET_BUILD_VARIANT" = "user" ]; then
+    OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-user.$USER.zip
+else
+    OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-eng.$USER.zip
+fi
+if [ ! -f "$OTAPACKAGE" ]; then
+	echo -e ${red}"$OTAPACKAGE doesn't exist!"${txtrst};
 	exit 1
 fi
 
@@ -52,12 +67,18 @@ mkdir -p $REPACK/parallel
 cd $REPACK/parallel
 cp $REPACK/ota/system/framework/framework-res.apk .
 cp $REPACK/ota/system/app/*.apk .
+for f in $REPACK/ota/system/priv-app/*.apk; do
+    cp $f ./priv-app-$(basename $f)
+done
 
 # Do optimization in parallel
 find ./ -name \*.apk | $XARGS $OPTICHARGER
 
 # Move optimized apks to repack directory
 mv -f $REPACK/parallel/framework-res.apk $REPACK/ota/system/framework/framework-res.apk
+for f in $REPACK/parallel/priv-app*.apk; do
+    mv $f $REPACK/ota/system/priv-app/$(basename $f | cut -d'-' -f3)
+done
 mv -f $REPACK/parallel/*.apk $REPACK/ota/system/app/
 
 # Return to directory
@@ -95,6 +116,23 @@ rm -rf $REPACK/ota/system/tts
 # No need for srec
 rm -rf $REPACK/ota/system/usr/srec
 
+# Delete liquid specific files
+if [ -f $ANDROID_BUILD_TOP/vendor/liquid/tools/squisher.rm ]; then
+	for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/liquid/tools/squisher.rm`; do
+		rm -f $REPACK/ota/$RM_FILE
+	done
+fi
+
+# Delete target product specific files
+if [ -f $ANDROID_BUILD_TOP/vendor/liquid/tools/$TARGET_PRODUCT-squisher.rm ]; then
+	for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/liquid/tools/$TARGET_PRODUCT-squisher.rm`; do
+		rm -f $REPACK/ota/$RM_FILE
+	done
+fi
+
+# Delete unnecessary binaries
+( cd $REPACK/ota/system/bin; echo $DELETE_BINS | xargs rm -f; )
+
 # No need for recovery
 rm -rf $REPACK/ota/recovery
 rm -rf $REPACK/ota/system/etc/recovery-resource.dat
@@ -106,37 +144,59 @@ rm -rf $REPACK/ota/system/etc/recovery-resource.dat
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.liquid\.version/s/^.*=//p' $OUT/system/build.prop`
 TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -b 8-`
-echo $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
+echo -e ${grn}"MODVERSION: $MODVERSION"${txtrst}
 OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
+ABIGEN=`grep 'ro.product.cpu.abi=' $REPACK/ota/system/build.prop | sed -e 's/ro.product.cpu.abi=//g'`
+
+if [ -n $ABIGEN ]; then
+	echo ${cya}"Packing in Pre-Built Libs for CPU Variant:${ylw}$ABIGEN"${txtrst}
+	cp ${ANDROID_BUILD_TOP}/vendor/liquid/prebuilt/libs/$ABIGEN/libbypass.so $REPACK/ota/system/lib/libbypass.so
+	echo ""
+fi
 
 # Add changelog
 . $ANDROID_BUILD_TOP/vendor/liquid/tools/changelog
-
+mv $OUT/Changelog.txt $OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.txt
 
 # Pack it up and sign
-printf "Zipping package..."
+echo -e ${grn}"Zipping package..."${txtrst}
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
-echo
-printf "Signing package..."
+echo -e ${grn}"Signing package..."${txtrst}
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
 java -Xmx1024m \
 	-jar $OUT/../../../host/$OUT_TARGET_HOST/framework/signapk.jar \
 	-w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
 	$REPACK/update.zip $OUTFILE
-echo
-printf "Cleaning up..."
+echo -e ${grn}"Cleaning up..."${txtrst}
 rm -rf $REPACK
-echo
+
+# get current version
+eval $(grep "^LIQUID_VERSION_" vendor/liquid/config/common.mk | sed 's/ *//g')
+VERSION="$LIQUID_VERSION_MAJOR.$LIQUID_VERSION_MINOR.$LIQUID_VERSION_MAINTENANCE"
 
 # Create a md5 checksum image of the repacked package
 (
 img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
-echo
-echo $CL_GRN"Package complete: $OUTFILE"$CL_RST
-echo $CL_GRN"md5: $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
-echo
+ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}'`
+echo -e ""
+echo -e ${blu}"       __                        _______                      __  __ " 
+echo -e "      / /   __ ___  __  __ _ ___/ / ___/ ___ ____  ___  ___  / /_/ /_ "
+echo -e "     / /   / / __ '/ / / / / __  /\__  \/ __' __ \/__ \/__ \/ __/ __ \ "
+echo -e "    / /___/ / /_/ / /_/ / / /_/ /___/  / / / / / //_/ //_/ / /_/ / / / "
+echo -e "   /_____/_/\__, /\__,_/_/\__,_//____ /_/ /_/ /_/\___/\___/\__/_/ /_/ "
+echo -e "              /_/       "${txtrst} ${cya}"Liquid-Kitkat v-$VERSION"
+echo -e "                                $TARGET_PRODUCT_FINAL"${txtrst}
+echo -e ""
+echo -e ""; echo -e ${cya}"Package complete:${ylw} $OUTFILE"${txtrst}
+echo -e ${cya}"ZIP:${ylw}  $img"${txtrst}
+echo -e ${cya}"MD5: ${ylw} `cat $img.md5sum | awk '{print $1}'`"${txtrst}
+echo -e ${cya}"SIZE:${ylw} $ZIPSIZE"${txtrst}
+MD5VAL=`cat $img.md5sum  | awk '{ print $1 }'`
+DEVICE=`echo -e $TARGET_PRODUCT | cut -d "_" -f 2`
+echo -e ""
 )
 
 exit 0
+
