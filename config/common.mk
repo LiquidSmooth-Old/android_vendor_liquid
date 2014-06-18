@@ -189,14 +189,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.romstats.version=$(LIQUID_VERSION) \
     ro.romstats.askfirst=0 \
     ro.romstats.tframe=1
-
-#Default buil.prop tweaks
-PRODUCT_PROPERTY_OVERRIDES += \
-    pm.sleep.mode=1 \
-    wifi.supplicant_scan_interval=180 \
-    windowsmgr.max_events_per_sec=150 \
-    debug.performance.tuning=1 \
-    ro.ril.power_collapse=1 \
-    persist.service.lgospd.enable=0 \
-    persist.service.pcsync.enable=0
-    
