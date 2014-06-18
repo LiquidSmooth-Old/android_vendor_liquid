@@ -27,6 +27,7 @@ add_lunch_combo liquid_i9500-userdebug
 add_lunch_combo liquid_janice-userdebug
 add_lunch_combo liquid_jewel-userdebug
 add_lunch_combo liquid_jflte-userdebug
+add_lunch_combo liquid_klte-userdebug
 add_lunch_combo liquid_l900-userdebug
 add_lunch_combo liquid_ls980-userdebug
 add_lunch_combo liquid_lt01lte-userdebug
