@@ -190,4 +190,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.power_collapse=1 \
     persist.service.lgospd.enable=0 \
     persist.service.pcsync.enable=0
-    

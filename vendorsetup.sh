@@ -9,6 +9,7 @@ add_lunch_combo liquid_d802-userdebug
 add_lunch_combo liquid_d803-userdebug
 add_lunch_combo liquid_deb-userdebug
 add_lunch_combo liquid_dlx-userdebug
+add_lunch_combo liquid_f320-userdebug
 add_lunch_combo liquid_falcon-userdebug
 add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_gee-userdebug
@@ -26,6 +27,7 @@ add_lunch_combo liquid_i9500-userdebug
 add_lunch_combo liquid_janice-userdebug
 add_lunch_combo liquid_jewel-userdebug
 add_lunch_combo liquid_jflte-userdebug
+add_lunch_combo liquid_klte-userdebug
 add_lunch_combo liquid_l900-userdebug
 add_lunch_combo liquid_ls980-userdebug
 add_lunch_combo liquid_lt01lte-userdebug
@@ -36,10 +38,7 @@ add_lunch_combo liquid_mako-userdebug
 add_lunch_combo liquid_manta-userdebug
 add_lunch_combo liquid_maserati-userdebug
 add_lunch_combo liquid_meliusltexx-userdebug
-add_lunch_combo liquid_m7-userdebug
 add_lunch_combo liquid_m7lte-userdebug
-add_lunch_combo liquid_m7spr-userdebug
-add_lunch_combo liquid_m7vzw-userdebug
 add_lunch_combo liquid_m8-userdebug
 add_lunch_combo liquid_moto_msm8960-userdebug
 add_lunch_combo liquid_moto_msm8960dt-userdebug
