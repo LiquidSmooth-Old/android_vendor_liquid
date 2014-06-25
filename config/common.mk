@@ -77,7 +77,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     LockClock \
     SoundRecorder \
-    Torch2 \    
+    Torch2 \
     Torch
 
 # Extras for Liquid
