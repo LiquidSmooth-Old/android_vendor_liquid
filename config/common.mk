@@ -18,7 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     persist.sys.root_access=3
 
-# CM Theme Engine
+# Theme engine
 include vendor/liquid/config/themes_common.mk
 
 # Added xbin files
