@@ -18,7 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     persist.sys.root_access=3
 
-# CM Theme Engine
+# Theme engine
 include vendor/liquid/config/themes_common.mk
 
 # Added xbin files
@@ -166,7 +166,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # version
-RELEASE = false
+RELEASE = true
 LIQUID_VERSION_MAJOR = 3
 LIQUID_VERSION_MINOR = 1
 
