@@ -46,6 +46,9 @@ add_lunch_combo liquid_shooteru-userdebug
 add_lunch_combo liquid_spyder-userdebug
 add_lunch_combo liquid_skyrocket-userdebug
 add_lunch_combo liquid_t0lte-userdebug
+add_lunch_combo liquid_t6-userdebug
+add_lunch_combo liquid_t6spr-userdebug
+add_lunch_combo liquid_t6vzw-userdebug
 add_lunch_combo liquid_targa-userdebug
 add_lunch_combo liquid_toro-userdebug
 add_lunch_combo liquid_toroplus-userdebug
