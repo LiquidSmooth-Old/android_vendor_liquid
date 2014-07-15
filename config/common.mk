@@ -90,7 +90,8 @@ PRODUCT_PACKAGES += \
     LiquidLauncher \
     LiquidPapers \
     LiquidStats \
-    LiquidUpdater
+    LiquidUpdater \
+    LiquidWeather
 
 # superuser
 SUPERUSER_EMBEDDED := true
@@ -166,9 +167,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # version
-RELEASE = true
+RELEASE = false
 LIQUID_VERSION_MAJOR = 3
-LIQUID_VERSION_MINOR = 1
+LIQUID_VERSION_MINOR = 2
 
 # release
 ifeq ($(RELEASE),true)
