@@ -76,6 +76,11 @@ PRODUCT_COPY_FILES += \
 # T-Mobile theme engine
 include vendor/liquid/config/themes_common.mk
 
+# Chromium Prebuilt
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+-include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
+endif    
+
 # Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
