@@ -72,7 +72,6 @@ PRODUCT_PACKAGES += \
     Calendar \
     CellBroadcastReceiver \
     LatinIME \
-    libcyanogen-dsp \
     libemoji \
     LiveWallpapersPicker \
     LockClock \
@@ -84,7 +83,6 @@ PRODUCT_PACKAGES += \
     Apollo \
     DashClock \
     DeskClock \
-    DSPManager \
     KernelTweaker \
     LiquidFileManager \
     LiquidLauncher \
@@ -99,6 +97,11 @@ SUPERUSER_EMBEDDED := true
 PRODUCT_PACKAGES += \
     su \
     Superuser
+
+# Viper4Android
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/viper/libv4a_fx_kk_NEON_HQ.so:system/lib/soundfx/libv4a_fx_kk_NEON_HQ.so \
+    vendor/liquid/prebuilt/common/etc/viper/ViPER4Android.apk:system/app/ViPER4Android.apk
 
 PRODUCT_COPY_FILES += \
     external/koush/Superuser/init.superuser.rc:root/init.superuser.rc
