@@ -81,7 +81,6 @@ else
 fi
 
 export USE_CCACHE=1
-export USE_PREBUILT_CHROMIUM=1
 
 opt_clean=0
 opt_dex=0
