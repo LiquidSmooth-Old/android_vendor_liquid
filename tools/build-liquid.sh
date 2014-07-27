@@ -93,7 +93,7 @@ opt_pipe=0
 opt_olvl=0
 opt_verbose=0
 
-while getopts "c:dfi:o:pjsv" opt; do
+while getopts "c:dij:psfo:v" opt; do
     case "$opt" in
     c) opt_clean="$OPTARG" ;;
     d) opt_dex=1 ;;
