@@ -200,3 +200,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.romstats.version=$(LIQUID_VERSION) \
     ro.romstats.askfirst=0 \
     ro.romstats.tframe=1
+
+ifeq ($(USE_PREBUILT_CHROMIUM),1)
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+
+$(call inherit-product-if-exists, prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk)
+
+endif
+endif
