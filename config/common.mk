@@ -200,3 +200,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.romstats.version=$(LIQUID_VERSION) \
     ro.romstats.askfirst=0 \
     ro.romstats.tframe=1
+
+$(call inherit-product, prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk)
