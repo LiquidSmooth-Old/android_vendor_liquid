@@ -151,6 +151,11 @@ else
     LIQUID_VERSION := LS-KK-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 endif
 
+# CM Hardware Abstraction Framework
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
+
 # HFM Files
 PRODUCT_COPY_FILES += \
 	vendor/liquid/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
