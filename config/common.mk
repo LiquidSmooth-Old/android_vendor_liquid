@@ -54,8 +54,7 @@ PRODUCT_PACKAGES += \
     LiquidLauncher \
     LiquidPapers \
     LiquidStats \
-    LiquidUpdater \
-    LiquidWeather
+    LiquidUpdater
 
 # superuser
 SUPERUSER_EMBEDDED := true
