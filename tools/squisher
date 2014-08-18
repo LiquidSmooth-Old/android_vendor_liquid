@@ -154,10 +154,6 @@ if [ -n $ABIGEN ]; then
 	echo ""
 fi
 
-# Add changelog
-. $ANDROID_BUILD_TOP/vendor/liquid/tools/changelog
-mv $OUT/Changelog.txt $OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.txt
-
 # Pack it up and sign
 echo -e ${grn}"Zipping package..."${txtrst}
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
@@ -170,6 +166,10 @@ java -Xmx1024m \
 echo -e ${grn}"Cleaning up..."${txtrst}
 rm -rf $REPACK
 
+# Add changelog
+. $ANDROID_BUILD_TOP/vendor/liquid/tools/changelog
+mv $OUT/Changelog.txt $OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.txt
+
 # get current version
 eval $(grep "^LIQUID_VERSION_" vendor/liquid/config/common.mk | sed 's/ *//g')
 VERSION="$LIQUID_VERSION_MAJOR.$LIQUID_VERSION_MINOR.$LIQUID_VERSION_MAINTENANCE"
@@ -181,7 +181,7 @@ cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}'`
 echo -e ""
-echo -e ${blu}"       __                        _______                      __  __ " 
+echo -e ${blu}"       __                        _______                      __  __ "
 echo -e "      / /   __ ___  __  __ _ ___/ / ___/ ___ ____  ___  ___  / /_/ /_ "
 echo -e "     / /   / / __ '/ / / / / __  /\__  \/ __' __ \/__ \/__ \/ __/ __ \ "
 echo -e "    / /___/ / /_/ / /_/ / / /_/ /___/  / / / / / //_/ //_/ / /_/ / / / "
