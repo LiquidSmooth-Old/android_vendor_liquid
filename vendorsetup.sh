@@ -2,6 +2,7 @@ add_lunch_combo liquid_acclaim-userdebug
 add_lunch_combo liquid_amami-userdebug
 add_lunch_combo liquid_apexqtmo-userdebug
 add_lunch_combo liquid_bacon-userdebug
+add_lunch_combo liquid_captivatemtd-userdebug
 add_lunch_combo liquid_codina-userdebug
 add_lunch_combo liquid_d2lte-userdebug
 add_lunch_combo liquid_d710-userdebug
