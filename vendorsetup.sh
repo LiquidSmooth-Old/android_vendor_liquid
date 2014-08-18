@@ -19,6 +19,7 @@ add_lunch_combo liquid_hercules-userdebug
 add_lunch_combo liquid_hlte-userdebug
 add_lunch_combo liquid_honami-userdebug
 add_lunch_combo liquid_i605-userdebug
+add_lunch_combo liquid_i777-userdebug
 add_lunch_combo liquid_i9082-userdebug
 add_lunch_combo liquid_i9300-userdebug
 add_lunch_combo liquid_i9305-userdebug
@@ -46,6 +47,8 @@ add_lunch_combo liquid_n7100-userdebug
 add_lunch_combo liquid_p880-userdebug
 add_lunch_combo liquid_p3100-userdebug
 add_lunch_combo liquid_p3110-userdebug
+add_lunch_combo liquid_p5100-userdebug
+add_lunch_combo liquid_p5110-userdebug
 add_lunch_combo liquid_serranoltexx-userdebug
 add_lunch_combo liquid_serrano3gxx-userdebug
 add_lunch_combo liquid_shooter-userdebug
