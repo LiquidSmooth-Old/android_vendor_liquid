@@ -54,9 +54,11 @@ add_lunch_combo liquid_serranoltexx-userdebug
 add_lunch_combo liquid_serrano3gxx-userdebug
 add_lunch_combo liquid_shooter-userdebug
 add_lunch_combo liquid_shooteru-userdebug
+add_lunch_combo liquid_sirius-userdebug
 add_lunch_combo liquid_spyder-userdebug
 add_lunch_combo liquid_skyrocket-userdebug
 add_lunch_combo liquid_tate-userdebug
+add_lunch_combo liquid_taoshan-userdebug
 add_lunch_combo liquid_t0lte-userdebug
 add_lunch_combo liquid_t6-userdebug
 add_lunch_combo liquid_t6spr-userdebug
