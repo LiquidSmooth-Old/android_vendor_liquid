@@ -44,6 +44,8 @@ PRODUCT_PACKAGES += \
     SoundRecorder \
     Torch
 
+#    SpencerPainting \
+
 # Extras for Liquid
 PRODUCT_PACKAGES += \
     Apollo \
@@ -101,6 +103,7 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/liquid/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/liquid/prebuilt/common/bin/50-liquid.sh:system/addon.d/50-liquid.sh \
+    vendor/liquid/prebuilt/common/bin/90-xposed.sh:system/addon.d/90-xposed.sh \
     vendor/liquid/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 # bin
