@@ -15,6 +15,7 @@ add_lunch_combo liquid_dlx-userdebug
 add_lunch_combo liquid_f320-userdebug
 add_lunch_combo liquid_falcon-userdebug
 add_lunch_combo liquid_find7-userdebug
+add_lunch_combo liquid_find7u-userdebug
 add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_gee-userdebug
 add_lunch_combo liquid_geeb-userdebug
