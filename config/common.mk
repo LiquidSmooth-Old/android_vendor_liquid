@@ -41,8 +41,7 @@ PRODUCT_PACKAGES += \
     libemoji \
     LiveWallpapersPicker \
     LockClock \
-    SoundRecorder \
-    Torch
+    SoundRecorder
 
 # Extras for Liquid
 PRODUCT_PACKAGES += \
