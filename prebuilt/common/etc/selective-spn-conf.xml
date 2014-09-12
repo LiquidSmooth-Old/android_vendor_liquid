@@ -1558,6 +1558,7 @@
   <spnOverride numeric="310380" spn="AT&amp;T Mobility" />
   <spnOverride numeric="310980" spn="AT&amp;T Mobility" />
   <spnOverride numeric="310990" spn="AT&amp;T Mobility" />
+  <spnOverride numeric="311870" spn="Boost Mobile" />
   <spnOverride numeric="310830" spn="Caprock" />
   <spnOverride numeric="310350" spn="Carolina Phone" />
   <spnOverride numeric="311130" spn="Cell One Amarillo" />
