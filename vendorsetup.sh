@@ -18,6 +18,7 @@ add_lunch_combo liquid_find7-userdebug
 add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_gee-userdebug
 add_lunch_combo liquid_geeb-userdebug
+add_lunch_combo liquid_ghost-userdebug
 add_lunch_combo liquid_grouper-userdebug
 add_lunch_combo liquid_hammerhead-userdebug
 add_lunch_combo liquid_hercules-userdebug
@@ -54,7 +55,6 @@ add_lunch_combo liquid_m7lte-userdebug
 add_lunch_combo liquid_m8-userdebug
 add_lunch_combo liquid_moto_msm8960-userdebug
 add_lunch_combo liquid_moto_msm8960_jbbl-userdebug
-add_lunch_combo liquid_moto_msm8960dt-userdebug
 add_lunch_combo liquid_n7100-userdebug
 add_lunch_combo liquid_odin-userdebug
 add_lunch_combo liquid_p880-userdebug
