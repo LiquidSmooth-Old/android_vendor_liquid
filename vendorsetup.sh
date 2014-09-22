@@ -64,6 +64,7 @@ add_lunch_combo liquid_p3100-userdebug
 add_lunch_combo liquid_p3110-userdebug
 add_lunch_combo liquid_p5100-userdebug
 add_lunch_combo liquid_p5110-userdebug
+add_lunch_combo liquid_peregrine-userdebug
 add_lunch_combo liquid_serranoltexx-userdebug
 add_lunch_combo liquid_serrano3gxx-userdebug
 add_lunch_combo liquid_shooter-userdebug
