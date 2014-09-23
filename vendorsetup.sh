@@ -79,6 +79,7 @@ add_lunch_combo liquid_t6-userdebug
 add_lunch_combo liquid_t6spr-userdebug
 add_lunch_combo liquid_t6vzw-userdebug
 add_lunch_combo liquid_targa-userdebug
+add_lunch_combo liquid_togari-userdebug
 add_lunch_combo liquid_toro-userdebug
 add_lunch_combo liquid_toroplus-userdebug
 add_lunch_combo liquid_u8833-userdebug
