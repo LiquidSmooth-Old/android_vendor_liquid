@@ -55,7 +55,7 @@ fi
 if [ "$(which pngquant)" != "" ];
 then
     optimize_png () {
-        pngquant --speed 1 --force --ext .png $1 1> /dev/null 2> /dev/null
+        pngquant --speed 1 --force --skip-if-larger --ext .png $1 1> /dev/null 2> /dev/null
     }
 elif [ "$(which pngcrush)" != "" ];
 then
