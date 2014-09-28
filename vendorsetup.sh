@@ -18,6 +18,7 @@ add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_geeb-userdebug
 add_lunch_combo liquid_ghost-userdebug
 add_lunch_combo liquid_grouper-userdebug
+add_lunch_combo liquid_hercules-userdebug
 add_lunch_combo liquid_hammerhead-userdebug
 add_lunch_combo liquid_hlte-userdebug
 add_lunch_combo liquid_hltespr-userdebug
