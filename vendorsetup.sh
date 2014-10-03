@@ -1,3 +1,4 @@
+add_lunch_combo liquid_a5-userdebug
 add_lunch_combo liquid_acclaim-userdebug
 add_lunch_combo liquid_amami-userdebug
 add_lunch_combo liquid_apexqtmo-userdebug
