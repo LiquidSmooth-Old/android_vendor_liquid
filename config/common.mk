@@ -171,7 +171,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # statistics identity
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.romstats.url=http://www.drdevs.com/stats/liquid/ \
+    ro.romstats.url=http://stats.liquidsmooth.net/ \
     ro.romstats.name=LiquidSmooth \
     ro.romstats.version=$(LIQUID_VERSION) \
     ro.romstats.askfirst=0 \
