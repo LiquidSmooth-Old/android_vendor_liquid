@@ -37,6 +37,7 @@ add_lunch_combo liquid_jemlte-userdebug
 add_lunch_combo liquid_jewel-userdebug
 add_lunch_combo liquid_jflte-userdebug
 add_lunch_combo liquid_klte-userdebug
+add_lunch_combo liquid_kltedv-userdebug
 add_lunch_combo liquid_kltespr-userdebug
 add_lunch_combo liquid_klteusc-userdebug
 add_lunch_combo liquid_kltevzw-userdebug
