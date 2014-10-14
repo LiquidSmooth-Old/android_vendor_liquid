@@ -21,7 +21,7 @@ usage()
     echo -e "    -o# Select GCC O Level"
     echo -e "        Valid O Levels are"
     echo -e "        1 (Os) or 3 (O3)"
-    echo -e "    -v  Verbose build output"
+    echo -e "    -z  create build log in 'build-logs'"
     echo -e ""
     echo -e ${txtbld}"  Example:"${txtrst}
     echo -e "    ./build-liquid.sh -p -o3 -j18 hammerhead"
@@ -88,6 +88,7 @@ opt_dex=0
 opt_chromium=0
 opt_initlogo=0
 opt_jobs="$CPUS"
+opt_log=0
 opt_sync=0
 opt_pipe=0
 opt_olvl=0
@@ -103,7 +104,7 @@ while getopts "c:dij:psfo:v" opt; do
     s) opt_sync=1 ;;
     p) opt_pipe=1 ;;
     o) opt_olvl="$OPTARG" ;;
-    v) opt_verbose=1 ;;
+    z) opt_log=1 ;;
     *) usage
     esac
 done
@@ -207,12 +208,22 @@ else
     echo -e ""
 fi
 
-if [ "$opt_verbose" -ne 0 ]; then
-make -j"$opt_jobs" showcommands liquid
+# make liquid
+if [ "$opt_log" -ne 0 ]; then
+    echo -e ""
+    echo -e ${bldgrn}"Creating 'build-logs' directory if one hasn't been created already"${txtrst}
+    echo -e ""
+    # create 'build-logs' directory if it hasn't already been created
+    mkdir -p build-logs
+    echo -e ""
+    echo -e ${bldgrn}"Your build will be logged in 'build-logs'"${txtrst}
+    echo -e ""
+    # log build into 'build-logs'
+    make -j"$opt_jobs" liquid 2>&1 | tee build-logs/liquid_$device-$(date "+%Y%m%d").txt
 else
-make -j"$opt_jobs" liquid
+    # build normally
+    make -j"$opt_jobs" liquid
 fi
-echo -e ""
 
 # cleanup unused built
 rm -f $OUTDIR/target/product/$device/liquid_*-ota*.zip
