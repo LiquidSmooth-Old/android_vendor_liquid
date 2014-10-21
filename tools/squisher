@@ -166,9 +166,13 @@ java -Xmx1024m \
 echo -e ${grn}"Cleaning up..."${txtrst}
 rm -rf $REPACK
 
-# Add changelog
+# Add changelog only to non test builds
+if [ "$LIQUID_TARGET_BUILD_TYPE" = "test" ]; then
+   echo -e ${red}"Build marked as test, no Changelog!"${txtrst};
+else
 . $ANDROID_BUILD_TOP/vendor/liquid/tools/changelog
 mv $OUT/Changelog.txt $OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.txt
+fi
 
 # get current version
 eval $(grep "^LIQUID_VERSION_" vendor/liquid/config/common.mk | sed 's/ *//g')
