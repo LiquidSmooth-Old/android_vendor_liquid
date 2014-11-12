@@ -111,19 +111,23 @@ PRODUCT_COPY_FILES += \
 # T-Mobile theme engine
 #include vendor/cm/config/themes_common.mk
 
-# Required CM packages
+# Liquid Stuff
 PRODUCT_PACKAGES += \
+    SlimLauncher \
+    LiquidStats \
+    Apollo \
+    DashClock \
+    DeskClock
+
+# Misc packages
+PRODUCT_PACKAGES += \
+    libemoji \
+    SpareParts \
+    LiveWallpapersPicker \
+    vim \
     Development \
     LatinIME \
     BluetoothExt
-
-# Extra packages
-PRODUCT_PACKAGES += \
-    libemoji \
-	SpareParts \
-	SlimLauncher \
-    LiveWallpapersPicker \
-    vim
 
 # Bring in all video files
 $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
