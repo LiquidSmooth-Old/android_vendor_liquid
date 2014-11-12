@@ -1,5 +1,5 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common Liquid stuff
+$(call inherit-product, vendor/liquid/config/common.mk)
 
 # ringtones
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -12,4 +12,4 @@ ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
     PRODUCT_BOOTANIMATION := vendor/liquid/prebuilt/common/bootanimation/720.zip:system/media/bootanimation.zip
 endif
 
-$(call inherit-product, vendor/cm/config/telephony.mk)
+$(call inherit-product, vendor/liquid/config/telephony.mk)
