@@ -139,9 +139,9 @@ include vendor/liquid/config/liquid_audio.mk
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 
 # CM Hardware Abstraction Framework
-#PRODUCT_PACKAGES += \
-#    org.cyanogenmod.hardware \
-#    org.cyanogenmod.hardware.xml
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
 
 # Extra tools in liquid
 PRODUCT_PACKAGES += \
@@ -189,6 +189,13 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_ffmpegvdec \
     libFFmpegExtractor \
     libnamparser
+
+#ROOT
+PRODUCT_PACKAGES += \
+    procmem \
+    procrank \
+    Superuser \
+    su
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
