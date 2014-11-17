@@ -89,7 +89,7 @@ PRODUCT_COPY_FILES += \
 
 # Liquid-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/init.liquid.rc:root/init.liquid.rc
+    vendor/liquid/prebuilt/common/etc/init.cm.rc:root/init.cm.rc
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
