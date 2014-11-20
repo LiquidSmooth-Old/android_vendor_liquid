@@ -129,6 +129,10 @@ PRODUCT_PACKAGES += \
     LatinIME \
     BluetoothExt
 
+# Viper4Android
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/app/Viper4Android/viper4android.apk:system/app/Viper4Android/viper4android.apk
+
 # Bring in all video files
 $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 
