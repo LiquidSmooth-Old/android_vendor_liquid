@@ -115,6 +115,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     SlimLauncher \
     LiquidStats \
+    LiquidUpdater \
     Apollo \
     DashClock \
     DeskClock
