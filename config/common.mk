@@ -130,6 +130,10 @@ PRODUCT_PACKAGES += \
     LatinIME \
     BluetoothExt
 
+# Proprietary latinime lib needed for Keyboard swyping
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+
 # Viper4Android
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/viper4android/viper4android.apk:system/app/Viper4Android/viper4android.apk
