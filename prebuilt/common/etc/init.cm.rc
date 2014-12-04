@@ -110,6 +110,9 @@ on boot
     setprop net.tcp.usercfg.wifi       1
     setprop net.tcp.usercfg.lte        1
 
+    #Temp fix for Superuser
+    chmod 0755 /system/xbin/su
+
 # adb over network
 on property:service.adb.tcp.port=5555
     stop adbd
