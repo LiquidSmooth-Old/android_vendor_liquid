@@ -118,7 +118,8 @@ PRODUCT_PACKAGES += \
     LiquidUpdater \
     Apollo \
     DashClock \
-    DeskClock
+    DeskClock \
+    LockClock
 
 # Misc packages
 PRODUCT_PACKAGES += \
