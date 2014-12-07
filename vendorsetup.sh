@@ -6,8 +6,10 @@ add_lunch_combo liquid_bacon-userdebug
 add_lunch_combo liquid_codina-userdebug
 add_lunch_combo liquid_condor-userdebug
 add_lunch_combo liquid_d2att-userdebug
+add_lunch_combo liquid_d2cri-userdebug
 add_lunch_combo liquid_d2spr-userdebug
 add_lunch_combo liquid_d2tmo-userdebug
+add_lunch_combo liquid_d2usc-userdebug
 add_lunch_combo liquid_d2vzw-userdebug
 add_lunch_combo liquid_d710-userdebug
 add_lunch_combo liquid_d800-userdebug
