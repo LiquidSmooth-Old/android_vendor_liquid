@@ -113,10 +113,11 @@ PRODUCT_COPY_FILES += \
 
 # Liquid Stuff
 PRODUCT_PACKAGES += \
+    PerformanceControl \
     SlimLauncher \
     LiquidStats \
     LiquidUpdater \
-    Apollo \
+    Eleven \
     DashClock \
     DeskClock \
     LockClock
