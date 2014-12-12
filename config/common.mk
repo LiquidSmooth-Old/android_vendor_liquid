@@ -134,7 +134,7 @@ PRODUCT_PACKAGES += \
 
 # Proprietary latinime lib needed for Keyboard swyping
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+    vendor/liquid/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
 # Viper4Android
 PRODUCT_COPY_FILES += \
