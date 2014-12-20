@@ -134,7 +134,7 @@ PRODUCT_PACKAGES += \
 
 # Proprietary latinime lib needed for Keyboard swyping
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+    vendor/liquid/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
 # Viper4Android
 PRODUCT_COPY_FILES += \
@@ -243,6 +243,11 @@ ifeq ($(RELEASE),true)
 # Disable multithreaded dexopt by default
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.dalvik.multithread=false
+endif
+
+# Chromium Prebuilt
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+-include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
 endif
 
 # by default, do not update the recovery with system updates
