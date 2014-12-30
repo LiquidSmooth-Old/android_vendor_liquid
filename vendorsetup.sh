@@ -1,10 +1,7 @@
-add_lunch_combo liquid_a5-userdebug
 add_lunch_combo liquid_acclaim-userdebug
 add_lunch_combo liquid_amami-userdebug
 add_lunch_combo liquid_apexqtmo-userdebug
 add_lunch_combo liquid_bacon-userdebug
-add_lunch_combo liquid_codina-userdebug
-add_lunch_combo liquid_condor-userdebug
 add_lunch_combo liquid_d2att-userdebug
 add_lunch_combo liquid_d2bst-userdebug
 add_lunch_combo liquid_d2cri-userdebug
@@ -23,7 +20,6 @@ add_lunch_combo liquid_deb-userdebug
 add_lunch_combo liquid_dlx-userdebug
 add_lunch_combo liquid_f320-userdebug
 add_lunch_combo liquid_falcon-userdebug
-add_lunch_combo liquid_find7-userdebug
 add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_geeb-userdebug
 add_lunch_combo liquid_ghost-userdebug
@@ -71,7 +67,6 @@ add_lunch_combo liquid_odin-userdebug
 add_lunch_combo liquid_p880-userdebug
 add_lunch_combo liquid_p3100-userdebug
 add_lunch_combo liquid_p3110-userdebug
-add_lunch_combo liquid_peregrine-userdebug
 add_lunch_combo liquid_serranoltexx-userdebug
 add_lunch_combo liquid_serrano3gxx-userdebug
 add_lunch_combo liquid_shamu-userdebug
@@ -89,10 +84,9 @@ add_lunch_combo liquid_toroplus-userdebug
 add_lunch_combo liquid_trltetmo-userdebug
 add_lunch_combo liquid_trlteusc-userdebug
 add_lunch_combo liquid_trltespr-userdebug
-add_lunch_combo liquid_u8833-userdebug
-add_lunch_combo liquid_u8951-userdebug
 add_lunch_combo liquid_umts_spyder-userdebug
 add_lunch_combo liquid_v500-userdebug
+add_lunch_combo liquid_victara-userdebug
 add_lunch_combo liquid_vigor-userdebug
 add_lunch_combo liquid_ville-userdebug
 add_lunch_combo liquid_vs980-userdebug
