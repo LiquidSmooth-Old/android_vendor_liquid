@@ -74,8 +74,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Development \
-    SpareParts \
-    su
+    SpareParts
 
 # Optional packages
 PRODUCT_PACKAGES += \
