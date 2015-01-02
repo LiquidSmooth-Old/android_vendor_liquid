@@ -203,13 +203,6 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     libnamparser
 
-#ROOT
-PRODUCT_PACKAGES += \
-    procmem \
-    procrank \
-    Superuser \
-    su
-
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
 # version
