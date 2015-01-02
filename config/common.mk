@@ -62,8 +62,10 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/liquid/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Embed SuperUser
-SUPERUSER_EMBEDDED := true
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/liquid/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 # Required packages
 PRODUCT_PACKAGES += \
