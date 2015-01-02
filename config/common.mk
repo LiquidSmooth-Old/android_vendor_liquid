@@ -1,7 +1,5 @@
 PRODUCT_BRAND ?= LiquidSmooth
 
-SUPERUSER_EMBEDDED := true
-
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
 TARGET_BOOTANIMATION_SIZE := $(shell \
@@ -86,10 +84,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/liquid/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+
 # Liquid-specific init file
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/init.cm.rc:root/init.cm.rc \
-    external/koush/Superuser/init.superuser.rc:root/init.superuser.rc
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
