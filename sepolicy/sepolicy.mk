@@ -20,7 +20,6 @@ BOARD_SEPOLICY_UNION += \
     property.te \
     recovery.te \
     shell.te \
-    su.te \
     sysinit.te \
     system.te \
     ueventd.te \
