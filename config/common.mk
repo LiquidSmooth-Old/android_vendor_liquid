@@ -71,9 +71,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Development \
-    SpareParts \
-    Superuser \
-    su
+    SpareParts
 
 # AudioFX
 PRODUCT_PACKAGES += \
