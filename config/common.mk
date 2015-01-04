@@ -132,7 +132,8 @@ PRODUCT_PACKAGES += \
     vim \
     Development \
     LatinIME \
-    BluetoothExt
+    BluetoothExt \
+    Terminal
 
 # Proprietary latinime lib needed for Keyboard swyping
 PRODUCT_COPY_FILES += \
