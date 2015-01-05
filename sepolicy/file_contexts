@@ -15,7 +15,7 @@
 #############################
 # performance-related sysfs files
 /sys/kernel/mm/ksm(/.*)?    u:object_r:sysfs_writable:s0
-/sys/block/mmcblk(/.*)?     u:object_r:sysfs_writable:s0
+/sys/block/mmcblk(/.*)?     u:object_r:sysfs_devices_system_iosched:s0
 /sys/block/zram(/.*)?       u:object_r:sysfs_writable:s0
 
 /data/hostapd(/.*)?         u:object_r:wifi_data_file:s0

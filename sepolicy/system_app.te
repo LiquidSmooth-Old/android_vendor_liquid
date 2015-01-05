@@ -5,6 +5,7 @@
 # performance settings
 allow system_app sysfs_lowmemorykiller:file rw_file_perms;
 allow system_app sysfs_devices_system_cpu:file rw_file_perms;
+allow system_app sysfs_devices_system_iosched:file rw_file_perms;
 allow system_app sysfs_writable:file rw_file_perms;
 
 # Read /sys/kernel/debug/wakeup_sources.
