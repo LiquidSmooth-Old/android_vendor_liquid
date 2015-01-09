@@ -1527,6 +1527,7 @@
   <apn carrier="Simple" mcc="310" mnc="260" apn="simple" port="" mmsc="http://smpl.mms.msg.eng.t-mobile.com/mms/wapenc" mvno_type="gid" mvno_match_data="534d" type="default,mms,supl" />
   <apn carrier="Simple" mcc="310" mnc="260" apn="simple" proxy="216.155.165.50" port="8080" user="" password="" mmsc="http://smpl.mms.msg.eng.t-mobile.com/mms/wapenc" mmsproxy="216.155.165.50" mmsport="8080" type="default,supl,mms" />
   <apn carrier="Walmart Family Mobile" mcc="310" mnc="260" apn="web.omwtoday.com" mmsproxy="216.155.165.50" mmsport="8080" mmsc="http://wirelessfour.mmsmvno.com/mms/wapenc" type="default,supl,mms" />
+<<<<<<< HEAD
   <apn carrier="Ting Data" mcc="310" mnc="260" apn="wholesale" type="default,admin,fota,mms,supl,hipri,internet,dun" protocol="IPV6" roaming_protocol="IPV6" />
   <apn carrier="Ting MMS" mcc="310" mnc="260" apn="wholesale" mmsc="http://wholesale.mmsmvno.com/mms/wapenc" type="mms" protocol="IP" roaming_protocol="IP" />
   <apn carrier="US Mobile" mcc="310" mnc="260" apn="pwg" mmsc="http://pwg.mmsmvno.com/mms/wapenc" type="default,supl,mms" />
@@ -1560,6 +1561,7 @@
   <apn carrier="ATT Phone" mcc="310" mnc="410" apn="phone" mmsc="http://mmsc.mobile.att.net" mmsproxy="proxy.mobile.att.net" mmsport="80" type="default,supl,mms,hipri" />
   <apn carrier="ATT Broadband" mcc="310" mnc="410" apn="broadband" user="" password="" mmsc="" type="default,supl" />
   <apn carrier="ATT Activation" mcc="310" mnc="410" apn="lwaactivate" user="" password="" mmsc="" protocol="IP" />
+  <apn carrier="ATT Nextgenphone" mcc="310" mnc="410" apn="nxtgenphone" user="" mmsc="http://mmsc.mobile.att.net" mmsproxy="proxy.mobile.att.net" mmsport="80" type="default,mms,supl,fota,hipri" />
   <apn carrier="StraightTalk ATT" mcc="310" mnc="410" apn="tfdata" port="80" mmsc="http://mms-tf.net" mmsproxy="mms3.tracfone.com" mmsport="80" type="default,supl,mms" />
   <apn carrier="StraightTalk ATT.mvno" mcc="310" mnc="410" apn="att.mvno" port="80" mmsc="http://mmsc.cingular.com" mmsproxy="66.209.11.33" mmsport="80" type="default,supl,mms" />
   <apn carrier="StraightTalk ATT" mcc="310" mnc="410" apn="att.mvno" proxy="" port="" user="" password="" mmsc="http://mmsc.cingular.com" mmsproxy="66.209.11.33" mmsport="80" type="default,supl,mms" />
