@@ -110,8 +110,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/com.liquidsmooth.android.xml:system/etc/permissions/com.liquidsmooth.android.xml
 
+# Layers Theme
+PRODUCT_COPY_FILES += \
+    vendor/liquid/config/permissions/com.layers.theme.xml:system/etc/permissions/com.layers.theme.xml
+
 # T-Mobile theme engine
-include vendor/liquid/config/themes_common.mk
+#include vendor/liquid/config/themes_common.mk
 
 # Liquid Stuff
 PRODUCT_PACKAGES += \
