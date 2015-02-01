@@ -10,15 +10,11 @@ add_lunch_combo liquid_d2tmo-userdebug
 add_lunch_combo liquid_d2usc-userdebug
 add_lunch_combo liquid_d2vzw-userdebug
 add_lunch_combo liquid_d710-userdebug
-add_lunch_combo liquid_d800-userdebug
 add_lunch_combo liquid_d801-userdebug
-add_lunch_combo liquid_d802-userdebug
-add_lunch_combo liquid_d803-userdebug
 add_lunch_combo liquid_d851-userdebug
 add_lunch_combo liquid_d855-userdebug
 add_lunch_combo liquid_deb-userdebug
 add_lunch_combo liquid_dlx-userdebug
-add_lunch_combo liquid_f320-userdebug
 add_lunch_combo liquid_falcon-userdebug
 add_lunch_combo liquid_flo-userdebug
 add_lunch_combo liquid_geeb-userdebug
