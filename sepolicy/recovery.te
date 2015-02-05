@@ -28,4 +28,8 @@ allow recovery sdcard_posix:file r_file_perms;
 # Control properties
 allow recovery recovery_prop:property_service set;
 
+# /cache/recovery things: command and logs
+allow recovery recovery_cache_file:dir create_dir_perms;
+allow recovery recovery_cache_file:file create_file_perms;
+
 ')
