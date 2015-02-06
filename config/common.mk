@@ -66,14 +66,14 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/liquid/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/liquid/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/liquid/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/liquid/prebuilt/common/bin/50-liquid.sh:system/addon.d/50-liquid.sh \
     vendor/liquid/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
+    vendor/liquid/prebuilt/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh
 
 # init.d support
 PRODUCT_COPY_FILES += \
