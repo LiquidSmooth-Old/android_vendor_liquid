@@ -40,6 +40,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/init.local.rc:root/init.slim.rc
 
+# Layers Theme
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/Layers.apk:system/app/Layers/Layers.apk
+
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
@@ -73,25 +77,16 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
-# Optional packages
-PRODUCT_PACKAGES += \
-    Basic \
-    LiveWallpapersPicker \
-    PhaseBeam
-
 # AudioFX
 PRODUCT_PACKAGES += \
     AudioFX
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
-    SlimCenter \
     SlimLauncher \
     LatinIME \
     BluetoothExt \
     DashClock
-
-#    SlimFileManager removed until updated
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -159,16 +154,6 @@ ifndef SLIM_BUILD_TYPE
     SLIM_BUILD_TYPE := UNOFFICIAL
     PLATFORM_VERSION_CODENAME := UNOFFICIAL
     SLIM_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
-endif
-
-# SlimIRC
-# export INCLUDE_SLIMIRC=1 for unofficial builds
-ifneq ($(filter WEEKLY OFFICIAL,$(SLIM_BUILD_TYPE)),)
-    INCLUDE_SLIMIRC = 1
-endif
-
-ifneq ($(INCLUDE_SLIMIRC),)
-    PRODUCT_PACKAGES += SlimIRC
 endif
 
 # Set all versions
