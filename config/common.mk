@@ -59,21 +59,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Tether for all
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-# Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/liquid/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/liquid/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/liquid/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/liquid/prebuilt/common/bin/50-liquid.sh:system/addon.d/50-liquid.sh \
     vendor/liquid/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh
+    vendor/liquid/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
 # init.d support
 PRODUCT_COPY_FILES += \
@@ -106,17 +101,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
-# This is liquid!
-PRODUCT_COPY_FILES += \
-    vendor/liquid/config/permissions/com.liquidsmooth.android.xml:system/etc/permissions/com.liquidsmooth.android.xml
-
 # Layers Theme
 PRODUCT_COPY_FILES += \
-    vendor/liquid/config/permissions/com.layers.theme.xml:system/etc/permissions/com.layers.theme.xml \
     vendor/liquid/prebuilt/common/etc/Layers.apk:system/app/Layers/Layers.apk
-
-# T-Mobile theme engine
-#include vendor/liquid/config/themes_common.mk
 
 # Liquid Stuff
 PRODUCT_PACKAGES += \
