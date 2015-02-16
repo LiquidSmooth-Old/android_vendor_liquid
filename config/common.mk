@@ -132,7 +132,7 @@ PRODUCT_COPY_FILES += \
 
 # Viper4Android
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/viper4android/viper4android.apk:system/app/Viper4Android/viper4android.apk
+    vendor/liquid/prebuilt/common/app/ViPER4Android/ViPER4Android.apk:system/app/ViPER4Android/ViPER4Android.apk
 
 # Bring in all video files
 $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
