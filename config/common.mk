@@ -155,6 +155,14 @@ else
     LIQUID_VERSION := LS-LP-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
 endif
 
+# statistics identity
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.romstats.url=http://stats.liquidsmooth.net/ \
+    ro.romstats.name=LiquidSmooth \
+    ro.romstats.version=$(LIQUID_VERSION) \
+    ro.romstats.askfirst=0 \
+    ro.romstats.tframe=1
+
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.liquid.version=$(LIQUID_VERSION)
