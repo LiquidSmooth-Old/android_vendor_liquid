@@ -168,6 +168,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.liquid.version=$(LIQUID_VERSION)
-
-EXTENDED_POST_PROCESS_PROPS := vendor/liquid/tools/liquid_process_props.py
-
