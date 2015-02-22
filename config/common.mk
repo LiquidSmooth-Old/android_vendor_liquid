@@ -100,6 +100,7 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
+    PerformanceControl \
     SlimLauncher \
     LatinIME \
     BluetoothExt \
