@@ -65,6 +65,7 @@ add_lunch_combo liquid_meliusltexx-userdebug
 add_lunch_combo liquid_m7lte-userdebug
 add_lunch_combo liquid_m8-userdebug
 add_lunch_combo liquid_n7100-userdebug
+add_lunch_combo liquid_obake-userdebug
 add_lunch_combo liquid_odin-userdebug
 add_lunch_combo liquid_p880-userdebug
 add_lunch_combo liquid_p3100-userdebug
