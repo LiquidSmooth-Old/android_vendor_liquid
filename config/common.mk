@@ -44,6 +44,23 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/Layers.apk:system/app/Layers/Layers.apk
 
+# Synergy Theme apks
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_teleservice_v4.apk:vendor/overlay/Synergy_teleservice_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_cellbroadcast_v4.apk:vendor/overlay/Synergy_cellbroadcast_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_contacts_v4.apk:vendor/overlay/Synergy_contacts_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_dialer_v4.apk:vendor/overlay/Synergy_dialer_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_framework-res_v4.apk:vendor/overlay/Synergy_framework-res_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_gmail_v4.apk:vendor/overlay/Synergy_gmail_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_googlemms_v4.apk:vendor/overlay/Synergy_googlemms_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_hangouts_v4.apk:vendor/overlay/Synergy_hangouts_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_inbox_v4.apk:vendor/overlay/Synergy_inbox_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_keyboard_v4.apk:vendor/overlay/Synergy_keyboard_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_playmusic_v4.apk:vendor/overlay/Synergy_playmusic_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_playstore_v4.apk:vendor/overlay/Synergy_playstore_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_settings_v4.apk:vendor/overlay/Synergy_settings_v4.apk \
+    vendor/liquid/prebuilt/common/etc/synergy/Synergy_systemui_v4.apk:vendor/overlay/Synergy_systemui_v4.apk
+
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
