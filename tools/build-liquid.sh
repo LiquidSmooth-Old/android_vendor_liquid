@@ -8,10 +8,11 @@ usage()
     echo -e ""
     echo -e ${txtbld}"  Options:"${txtrst}
     echo -e "    -c# Cleanin options before build:"
-    echo -e "        1 - make clean"
-    echo -e "        2 - make dirty"
-    echo -e "        3 - make magic"
-    echo -e "        4 - make kernelclean"
+    echo -e "        1 - make liquid"
+    echo -e "        2 - make clean"
+    echo -e "        3 - make dirty"
+    echo -e "        4 - make magic"
+    echo -e "        5 - make kernelclean"
     echo -e "    -d  Use dex optimizations"
     echo -e "    -f Build with prebuilt chromium"
     echo -e "    -i  Static Initlogo"
@@ -121,21 +122,25 @@ VERSION="$LIQUID_VERSION_MAJOR.$LIQUID_VERSION_MINOR.$LIQUID_VERSION_MAINTENANCE
 echo -e ${cya}"Building ${ppl}Liquidsmooth ${bldylw}$VERSION"${txtrst}
 
 if [ "$opt_clean" -eq 1 ]; then
+    echo -e ""
+    echo -e ${bldblu}"Building LiquidSmooth"${txtrst}
+    echo -e ""
+elif [ "$opt_clean" -eq 2 ]; then
     make clean >/dev/null
     echo -e ""
     echo -e ${bldblu}"Out is clean"${txtrst}
     echo -e ""
-elif [ "$opt_clean" -eq 2 ]; then
+elif [ "$opt_clean" -eq 3 ]; then
     make dirty >/dev/null
     echo -e ""
     echo -e ${bldblu}"Out is dirty"${txtrst}
     echo -e ""
-elif [ "$opt_clean" -eq 3 ]; then
+elif [ "$opt_clean" -eq 4 ]; then
     make magic >/dev/null
     echo -e ""
     echo -e ${bldblu}"Enjoy your magical adventure"${txtrst}
     echo -e ""
-elif [ "$opt_clean" -eq 4 ]; then
+elif [ "$opt_clean" -eq 5 ]; then
     make kernelclean >/dev/null
     echo -e ""
     echo -e ${bldblu}"All kernel components have been removed"${txtrst}
