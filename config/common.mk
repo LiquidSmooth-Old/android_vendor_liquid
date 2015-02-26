@@ -44,6 +44,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/Layers.apk:system/app/Layers/Layers.apk
 
+# Kernel Auditor
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/Auditor.apk:system/app/Auditor/Auditor.apk
+
 # Synergy Theme apks
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/synergy/Synergy_teleservice_v4.apk:vendor/overlay/Synergy_teleservice_v4.apk \
