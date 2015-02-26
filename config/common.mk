@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     DashClock \
     DeskClock \
+    Terminal \
     LockClock
 
 # Extra tools
