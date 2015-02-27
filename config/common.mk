@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PerformanceControl \
     SlimLauncher \
+    Eleven \
     LatinIME \
     BluetoothExt \
     DashClock \
