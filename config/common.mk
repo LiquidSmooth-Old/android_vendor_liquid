@@ -89,6 +89,7 @@ PRODUCT_PACKAGES += \
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     SlimLauncher \
+    Eleven \
     LatinIME \
     BluetoothExt \
     DashClock \
