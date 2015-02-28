@@ -119,6 +119,9 @@ PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
     tune2fs \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat
