@@ -134,6 +134,11 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     libnamparser
 
+# CM Hardware Abstraction Framework
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
+
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
