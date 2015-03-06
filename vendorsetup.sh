@@ -47,6 +47,7 @@ add_lunch_combo liquid_maserati-userdebug
 add_lunch_combo liquid_m7lte-userdebug
 add_lunch_combo liquid_m8-userdebug
 add_lunch_combo liquid_n7100-userdebug
+add_lunch_combo liquid_obake-userdebug
 add_lunch_combo liquid_shamu-userdebug
 add_lunch_combo liquid_shooter-userdebug
 add_lunch_combo liquid_spyder-userdebug
