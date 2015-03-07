@@ -111,6 +111,7 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     DashClock \
     DeskClock \
+    LiveWallpapersPicker \
     Terminal \
     LockClock
 
