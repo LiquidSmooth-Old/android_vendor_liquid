@@ -56,6 +56,7 @@ add_lunch_combo liquid_togari-userdebug
 add_lunch_combo liquid_trltetmo-userdebug
 add_lunch_combo liquid_trlteusc-userdebug
 add_lunch_combo liquid_trltespr-userdebug
+add_lunch_combo liquid_trltexx-userdebug
 add_lunch_combo liquid_umts_spyder-userdebug
 add_lunch_combo liquid_victara-userdebug
 add_lunch_combo liquid_vs980-userdebug
