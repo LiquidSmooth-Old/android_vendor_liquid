@@ -41,6 +41,7 @@ add_lunch_combo liquid_ls980-userdebug
 add_lunch_combo liquid_lt01lte-userdebug
 add_lunch_combo liquid_lt013g-userdebug
 add_lunch_combo liquid_lt01wifi-userdebug
+add_lunch_combo liquid_lt03wifi-userdebug
 add_lunch_combo liquid_mb886-userdebug
 add_lunch_combo liquid_mako-userdebug
 add_lunch_combo liquid_maserati-userdebug
