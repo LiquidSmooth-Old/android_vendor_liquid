@@ -180,7 +180,7 @@ endif
 # version
 RELEASE = false
 LIQUID_VERSION_MAJOR = 4
-LIQUID_VERSION_MINOR = 0
+LIQUID_VERSION_MINOR = 1
 
 # release
 ifeq ($(RELEASE),true)
