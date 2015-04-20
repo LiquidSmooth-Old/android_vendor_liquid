@@ -73,6 +73,9 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
     vendor/liquid/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
+# T-Mobile theme engine
+include vendor/liquid/config/themes_common.mk
+
 # Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
