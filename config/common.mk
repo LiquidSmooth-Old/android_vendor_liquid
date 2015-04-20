@@ -81,7 +81,8 @@ include vendor/liquid/config/themes_common.mk
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Development \
-    SpareParts
+    SpareParts \
+    su
 
 # Optional packages
 PRODUCT_PACKAGES += \
