@@ -42,6 +42,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/init.local.rc:root/init.liquid.rc
 
+# Kernel Auditor
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/Auditor.apk:system/app/Auditor/Auditor.apk
+
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
@@ -94,8 +98,7 @@ PRODUCT_PACKAGES += \
     DeskClock \
     LiveWallpapersPicker \
     Terminal \
-    LockClock \
-    KernelAdiutor
+    LockClock
 
 # Extra tools
 PRODUCT_PACKAGES += \
