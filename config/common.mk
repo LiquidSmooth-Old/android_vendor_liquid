@@ -38,7 +38,7 @@ PRODUCT_COPY_FILES += \
 
 # Liquid-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/init.local.rc:root/init.liquid.rc
+    vendor/liquid/prebuilt/common/etc/init.local.rc:root/init.slim.rc
 
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
