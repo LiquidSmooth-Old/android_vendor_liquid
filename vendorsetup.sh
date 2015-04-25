@@ -64,7 +64,6 @@ add_lunch_combo liquid_umts_spyder-userdebug
 add_lunch_combo liquid_victara-userdebug
 add_lunch_combo liquid_vs980-userdebug
 add_lunch_combo liquid_xt897-userdebug
-add_lunch_combo liquid_xt897c-userdebug
 add_lunch_combo liquid_xt907-userdebug
 add_lunch_combo liquid_xt925-userdebug
 add_lunch_combo liquid_xt926-userdebug
