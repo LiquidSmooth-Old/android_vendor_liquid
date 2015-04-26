@@ -32,6 +32,7 @@ add_lunch_combo liquid_jflteusc-userdebug
 add_lunch_combo liquid_jfltevzw-userdebug
 add_lunch_combo liquid_jfltexx-userdebug
 add_lunch_combo liquid_klimtwifi-userdebug
+add_lunch_combo liquid_klimtlte-userdebug
 add_lunch_combo liquid_klte-userdebug
 add_lunch_combo liquid_kltedv-userdebug
 add_lunch_combo liquid_kltespr-userdebug
