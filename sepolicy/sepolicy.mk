@@ -15,6 +15,7 @@ BOARD_SEPOLICY_UNION += \
     service_contexts \
     app.te \
     auditd.te \
+    adbd.te \
     bootanim.te \
     drmserver.te \
     healthd.te \
@@ -25,9 +26,13 @@ BOARD_SEPOLICY_UNION += \
     property.te \
     recovery.te \
     shell.te \
+    su.te \
     sysinit.te \
     system.te \
+    system_app.te \
+    system_server.te \
     ueventd.te \
+    uncrypt.te \
     userinit.te \
     vold.te \
     zygote.te \
