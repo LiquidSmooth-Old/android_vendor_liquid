@@ -4,7 +4,7 @@
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/liquid/sepolicy
+    vendor/slim/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file.te \
@@ -13,10 +13,8 @@ BOARD_SEPOLICY_UNION += \
     property_contexts \
     seapp_contexts \
     service_contexts \
-    app.te \
     auditd.te \
-    bootanim.te \
-    drmserver.te \
+    adbd.te \
     healthd.te \
     hostapd.te \
     installd.te \
@@ -25,10 +23,13 @@ BOARD_SEPOLICY_UNION += \
     property.te \
     recovery.te \
     shell.te \
+    su.te \
     sysinit.te \
     system.te \
+    system_app.te \
+    system_server.te \
     ueventd.te \
+    uncrypt.te \
     userinit.te \
     vold.te \
-    zygote.te \
     mac_permissions.xml
