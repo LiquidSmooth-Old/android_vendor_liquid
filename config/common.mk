@@ -188,3 +188,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.liquid.version=$(LIQUID_VERSION)
+
+# Squisher Location
+SQUISHER_SCRIPT := vendor/liquid/tools/squisher
+

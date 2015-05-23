@@ -6,13 +6,6 @@
 
 . $ANDROID_BUILD_TOP/vendor/liquid/tools/colors
 
-OUT_TARGET_HOST=$(uname -a | grep Darwin)
-if [ -z "$OUT_TARGET_HOST" ]
-then
-    OUT_TARGET_HOST=linux-x86
-else
-    OUT_TARGET_HOST=darwin-x86
-fi
 
 set -e
 QUIET=1
@@ -51,29 +44,7 @@ then
     optimize_png () {
         pngquant --speed 1 --force --ext .png $1 1> /dev/null 2> /dev/null
     }
-elif [ "$(which pngcrush)" != "" ];
-then
-    optimize_png () {
-        pngcrush -q ${BRUTECRUSH} $1 ${1}.out 1> /dev/null 2> /dev/null
-        mv ${1}.out ${1} 2> /dev/null
-    }
-elif [ "$(which optipng)" != "" ];
-then
-    optimize_png () {
-        optipng -o7 -quiet $1 1> /dev/null 2> /dev/null
-    }
-elif [ "$(which pngout-static)" != "" ];
-then
-    optimize_png () {
-        pngout-static $1
-    }
-elif [ "$(which pngout)" != "" ];
-then
-    optimize_png () {
-        pngout $1
-    }
-else
-    echo -e ${red}"Please install pngquant, pngcrush, optipng, or pngout"${txtrst}
+    echo -e ${red}"Please install pngquant"${txtrst}
     exit 1;
 fi
 
@@ -96,13 +67,8 @@ then
 
     if [ "$2" != "" ];
     then
-        if [ "$DEFAULT_SYSTEM_DEV_CERTIFICATE" ]; then
-            CERT_PATH=`dirname $DEFAULT_SYSTEM_DEV_CERTIFICATE`
-        else
-            CERT_PATH=build/target/product/security
-        fi
-        CERT="$CERT_PATH"/$2.x509.pem
-        KEY="$CERT_PATH"/$2.pk8
+        CERT=build/target/product/security/$2.x509.pem
+        KEY=build/target/product/security/$2.pk8
         if [ ! -f "$ANDROID_BUILD_TOP/$CERT" ];
         then
             echo -e ${red}"$CERT does not exist!"${txtrst};
@@ -110,14 +76,14 @@ then
         fi
     else
         APKINFO=`grep "name=\"$NAME\"" $APKCERTS`;
-        [ $QUIET ] || echo -e "APKINFO: $APKINFO";
+        [ $QUIET ] || echo "APKINFO: $APKINFO";
         if [ "$APKINFO" = "" ];
         then
             echo -e ${red}"No apk info for $NAME"${txtrst};
             exit 1;
         fi
-        CERT=`echo -e $APKINFO | awk {'print $2'} | cut -f 2 -d "=" | tr -d "\""`;
-        KEY=`echo -e $APKINFO | awk {'print $3'} | cut -f 2 -d "=" | tr -d "\""`;
+        CERT=`echo $APKINFO | awk {'print $2'} | cut -f 2 -d "=" | tr -d "\""`;
+        KEY=`echo $APKINFO | awk {'print $3'} | cut -f 2 -d "=" | tr -d "\""`;
         if [ "$CERT" = "" ];
         then
             echo -e ${red}"Unable to find certificate for $NAME"${txtrst}
