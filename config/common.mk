@@ -122,6 +122,9 @@ PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=1
+
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
