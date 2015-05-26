@@ -17,7 +17,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false \
     dalvik.vm.image-dex2oat-filter=everything \
-    dalvik.vm.dex2oat-filter=everything
+    dalvik.vm.dex2oat-filter=everything \
+    ro.product.locale.language=en \
+    ro.product.locale.region=US
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
