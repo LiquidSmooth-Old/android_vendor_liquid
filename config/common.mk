@@ -203,4 +203,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ifneq ($(TARGET_ENABLE_UKM),true)
 -include vendor/liquid/config/common_ukm.mk
 endif
-
