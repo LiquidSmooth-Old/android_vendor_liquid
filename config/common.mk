@@ -88,7 +88,9 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     Terminal \
     LockClock \
-    KernelAdiutor
+    KernelAdiutor \
+    Apollo \
+    CMFileManager
 
 # Extra tools
 PRODUCT_PACKAGES += \
