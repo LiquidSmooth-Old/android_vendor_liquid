@@ -72,10 +72,6 @@ PRODUCT_PACKAGES += \
     SpareParts \
     su
 
-# AudioFX
-PRODUCT_PACKAGES += \
-    AudioFX
-
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
@@ -84,13 +80,15 @@ PRODUCT_PACKAGES += \
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     SlimLauncher \
-    Eleven \
+    Apollo \
+    CMFileManager \
     LatinIME \
     BluetoothExt \
     DashClock \
     DeskClock \
     Terminal \
     LockClock \
+    AudioFX \
     KernelAdiutor
 
 # Extra tools
@@ -120,6 +118,7 @@ PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
 
+# Root access on by default
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
 
