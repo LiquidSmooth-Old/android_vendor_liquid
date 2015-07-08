@@ -107,9 +107,8 @@ PRODUCT_PACKAGES += \
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
-    libstagefright_soft_ffmpegadec \
-    libstagefright_soft_ffmpegvdec \
-    libFFmpegExtractor \
+    libffmpeg_extractor \
+    libffmpeg_omx \
     media_codecs_ffmpeg.xml
 
 # CM Hardware Abstraction Framework
@@ -119,6 +118,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.sf.omx-plugin=libffmpeg_omx.so \
+    media.sf.extractor-plugin=libffmpeg_extractor.so
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
