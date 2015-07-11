@@ -72,6 +72,10 @@ PRODUCT_PACKAGES += \
     SpareParts \
     su
 
+# AudioFX
+PRODUCT_PACKAGES += \
+    AudioFX
+
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     PerformanceControl \
@@ -164,3 +168,11 @@ ifneq ($(TARGET_ENABLE_UKM),true)
 endif
 
 EXTENDED_POST_PROCESS_PROPS := vendor/liquid/tools/slim_process_props.py
+
+# Viper4Android
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/addon.d/91-v4a.sh:system/addon.d/91-v4a.sh \
+    vendor/liquid/prebuilt/common/priv-app/ViPER4Android_FX_A4.x/ViPER4Android_FX_A4.x.apk:system/priv-app/ViPER4Android_FX_A4/ViPER4Android_FX_A4.x.apk \
+    vendor/liquid/prebuilt/common/priv-app/ViPER4Android_FX_A4.x/lib/arm/libV4AJniUtils.so:system/priv-app/ViPER4Android_FX_A4/lib/arm/libV4AJniUtils.so \
+    vendor/liquid/prebuilt/common/etc/v4a.zip:system/addon.d/v4a.zip
+

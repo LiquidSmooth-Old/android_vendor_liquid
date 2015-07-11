@@ -1,1 +1,6 @@
+<<<<<<< HEAD:prebuilt/etc/hosts.og
 127.0.0.1                    localhost
+=======
+127.0.0.1                 localhost
+::1                          localhost
+>>>>>>> 3e02de9... Tidy up.:prebuilt/common/etc/hosts.og
