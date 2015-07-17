@@ -62,6 +62,14 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
     vendor/liquid/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
+# Layers
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/Layers.apk:system/app/Layers/Layers.apk \
+
+# No Icon for Layers App
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.layers.noIcon=noIcon
+
 # Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
