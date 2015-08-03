@@ -3630,6 +3630,6 @@
   <apn carrier="Claro UY MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.uy" mmsproxy="170.051.255.240" mmsport="9201" type="mms" />
   <apn carrier="MTS1" mcc="302" mnc="660" apn="sp.mts" mmsc="http://mmsc2.mts.net/" mmsproxy="209.4.229.90" mmsport="9401" type="default,mms" />
   <apn carrier="MTS2" mcc="302" mnc="370" apn="sp.mts" mmsc="http://mmsc2.mts.net/" mmsproxy="209.4.229.90" mmsport="9401" type="default,mms" />
-  <apn carrier="APN1 Boost Internet LTE" numeric="310120" mcc="310" mnc="120" apn="n.boost.ispsn" user="" server="" password="" proxy="null" port="null" mmsproxy="68.28.31.7" mmsport="80" mmsprotocol="null" mmsc="http://mm.myboostmobile.com" type="default,supl,mms,fota,dun" />
-  <apn carrier="APN2 Boost Internet EHRPD" numeric="310120" mcc="310" mnc="120" apn="n.boost.ispsn" user="" server="" password="" proxy="null" port="null" mmsproxy="68.28.31.7" mmsport="80" mmsprotocol="null" mmsc="http://mm.myboostmobile.com" type="default,supl,mms,fota,dun" />
+  <apn carrier="APN1 Boost Internet LTE" numeric="311870" mcc="310" mnc="120" apn="n.boost.ispsn" user="" server="" password="" proxy="null" port="null" mmsproxy="68.28.31.7" mmsport="80" mmsprotocol="null" mmsc="http://mm.myboostmobile.com" type="default,supl,mms,fota,dun" bearer="14" /> 
+  <apn carrier="APN2 Boost Internet EHRPD" numeric="311870" mcc="310" mnc="120" apn="n.boost.ispsn" user="" server="" password="" proxy="null" port="null" mmsproxy="68.28.31.7" mmsport="80" mmsprotocol="null" mmsc="http://mm.myboostmobile.com" type="default,supl,mms,fota,dun" bearer="13" /> 
 </apns>
