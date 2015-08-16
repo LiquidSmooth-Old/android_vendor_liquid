@@ -106,9 +106,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     Terminal \
     LockClock \
-    KernelAdiutor \
-    Apollo \
-    CMFileManager
+    KernelAdiutor
 
 #    SlimFileManager removed until updated
 
@@ -146,7 +144,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zipendif
+    vendor/liquid/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 # version
 RELEASE = false
