@@ -72,6 +72,10 @@ PRODUCT_PACKAGES += \
     SpareParts \
     su
 
+# AudioFX
+PRODUCT_PACKAGES += \
+    AudioFX
+
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     PerformanceControl \
