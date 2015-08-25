@@ -29,6 +29,7 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/liquid/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/liquid/prebuilt/common/bin/50-liquid.sh:system/addon.d/50-liquid.sh \
+    vendor/liquid/prebuilt/common/bin/91-v4a.sh:system/addon.d/91-v4a.sh \
     vendor/liquid/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/liquid/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
