@@ -26,27 +26,27 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/slim/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/slim/prebuilt/common/bin/50-slim.sh:system/addon.d/50-slim.sh \
-    vendor/slim/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/slim/prebuilt/common/etc/backup.conf:system/etc/backup.conf
+    vendor/liquid/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/liquid/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/liquid/prebuilt/common/bin/50-liquid.sh:system/addon.d/50-liquid.sh \
+    vendor/liquid/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
+    vendor/liquid/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
+    vendor/liquid/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
-# SLIM-specific init file
+# Liquid-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/init.local.rc:root/init.slim.rc
+    vendor/liquid/prebuilt/common/etc/init.local.rc:root/init.liquid.rc
 
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/liquid/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+    vendor/liquid/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -54,23 +54,26 @@ PRODUCT_COPY_FILES += \
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
-    vendor/slim/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
+    vendor/liquid/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
+    vendor/liquid/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/slim/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
-    vendor/slim/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/liquid/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/liquid/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
+    vendor/liquid/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Embed SuperUser
-SUPERUSER_EMBEDDED := true
+# T-Mobile theme engine
+include vendor/liquid/config/themes_common.mk
+
+# SuperSU
+    vendor/liquid/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/liquid/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 # Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Development \
     SpareParts \
-    Superuser \
     su
 
 # Optional packages
@@ -90,11 +93,16 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
-    SlimCenter \
+    PerformanceControl \
     SlimLauncher \
     LatinIME \
     BluetoothExt \
-    DashClock
+    DashClock \
+    DeskClock \
+    LiveWallpapersPicker \
+    Terminal \
+    LockClock \
+    KernelAdiutor
 
 #    SlimFileManager removed until updated
 
@@ -104,11 +112,17 @@ PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
     tune2fs \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat \
     ntfsfix \
     ntfs-3g
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=1
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
@@ -123,84 +137,45 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/slim/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
-# Boot animation include
-ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
-
-# determine the smaller dimension
-TARGET_BOOTANIMATION_SIZE := $(shell \
-  if [ $(TARGET_SCREEN_WIDTH) -lt $(TARGET_SCREEN_HEIGHT) ]; then \
-    echo $(TARGET_SCREEN_WIDTH); \
-  else \
-    echo $(TARGET_SCREEN_HEIGHT); \
-  fi )
-
-# get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/slim/prebuilt/common/bootanimation))
-bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
-
-# find the appropriate size and set
-define check_and_set_bootanimation
-$(eval TARGET_BOOTANIMATION_NAME := $(shell \
-  if [ -z "$(TARGET_BOOTANIMATION_NAME)" ]; then
-    if [ $(1) -le $(TARGET_BOOTANIMATION_SIZE) ]; then \
-      echo $(1); \
-      exit 0; \
-    fi;
-  fi;
-  echo $(TARGET_BOOTANIMATION_NAME); ))
-endef
-$(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size)))
-
-ifeq ($(TARGET_BOOTANIMATION_HALF_RES),true)
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/bootanimation/halfres/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+    vendor/liquid/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zipendif
+
+# version
+RELEASE = false
+LIQUID_VERSION_MAJOR = 4
+LIQUID_VERSION_MINOR = 1
+
+# release
+ifeq ($(RELEASE),true)
+    LIQUID_VERSION := LS-LP-MileStone-$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)
 else
+    LIQUID_VERSION_STATE := $(shell date +%Y-%m-%d)
+    LIQUID_VERSION := LS-LP-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
+endif
+
+# HFM Files
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
-endif
-endif
+	vendor/liquid/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+	vendor/liquid/prebuilt/etc/hosts.og:system/etc/hosts.og
 
-# Versioning System
-# SlimLP first version.
-PRODUCT_VERSION_MAJOR = 5.1.1
-PRODUCT_VERSION_MINOR = beta
-PRODUCT_VERSION_MAINTENANCE = 0.6
-ifdef SLIM_BUILD_EXTRA
-    SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
-endif
-ifndef SLIM_BUILD_TYPE
-    SLIM_BUILD_TYPE := UNOFFICIAL
-    PLATFORM_VERSION_CODENAME := UNOFFICIAL
-    SLIM_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
-endif
-
-# SlimIRC
-# export INCLUDE_SLIMIRC=1 for unofficial builds
-ifneq ($(filter WEEKLY OFFICIAL,$(SLIM_BUILD_TYPE)),)
-    INCLUDE_SLIMIRC = 1
-endif
-
-ifneq ($(INCLUDE_SLIMIRC),)
-    PRODUCT_PACKAGES += SlimIRC
-endif
+# statistics identity
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.romstats.url=http://stats.liquidsmooth.net/ \
+    ro.romstats.name=LiquidSmooth \
+    ro.romstats.version=$(LIQUID_VERSION) \
+    ro.romstats.askfirst=0 \
+    ro.romstats.tframe=1
 
 # Chromium Prebuilt
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
 endif
 
-# Set all versions
-SLIM_VERSION := Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(SLIM_BUILD_TYPE)$(SLIM_POSTFIX)
-SLIM_MOD_VERSION := Slim-$(SLIM_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(SLIM_BUILD_TYPE)$(SLIM_POSTFIX)
-
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    slim.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
-    ro.slim.version=$(SLIM_VERSION) \
-    ro.modversion=$(SLIM_MOD_VERSION) \
-    ro.slim.buildtype=$(SLIM_BUILD_TYPE)
+    ro.liquid.version=$(LIQUID_VERSION)
 
-EXTENDED_POST_PROCESS_PROPS := vendor/slim/tools/slim_process_props.py
+EXTENDED_POST_PROCESS_PROPS := vendor/liquid/tools/liquid_process_props.py
 

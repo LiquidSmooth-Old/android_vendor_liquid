@@ -1,10 +1,10 @@
-# slim functions that extend build/envsetup.sh
+# liquid functions that extend build/envsetup.sh
 
-function slim_device_combos() {
+function liquid_device_combos() {
     local device
 
     T="$(gettop)"
-    list_file="${T}/vendor/slim/slim.devices"
+    list_file="${T}/vendor/liquid/liquid.devices"
     variant="userdebug"
 
     if [[ $1 ]]
@@ -26,21 +26,21 @@ function slim_device_combos() {
     if [[ ! -f "${list_file}" ]]
     then
         echo "unable to find device list: ${list_file}"
-        list_file="${T}/vendor/slim/slim.devices"
+        list_file="${T}/vendor/liquid/liquid.devices"
         echo "defaulting device list file to: ${list_file}"
     fi
 
     while IFS= read -r device
     do
-        add_lunch_combo "slim_${device}-${variant}"
+        add_lunch_combo "liquid_${device}-${variant}"
     done < "${list_file}"
 }
 
-function slim_rename_function() {
-    eval "original_slim_$(declare -f ${1})"
+function liquid_rename_function() {
+    eval "original_liquid_$(declare -f ${1})"
 }
 
-function slim_add_hmm_entry() {
+function liquid_add_hmm_entry() {
     f_name="${1}"
     f_desc="${2}"
 
@@ -78,6 +78,27 @@ function slimremote()
 
     git remote add slim "git@github.com:SlimRoms/$pfx$project"
     echo "Remote 'slim' created"
+}
+
+function liquidremote()
+{
+    if ! git rev-parse &> /dev/null
+    then
+        echo "Not in a git directory. Please run this from an Android repository you wish to set up."
+        return
+    fi
+    git remote rm liquid 2> /dev/null
+
+    proj="$(pwd -P | sed "s#$ANDROID_BUILD_TOP/##g")"
+
+    if (echo "$proj" | egrep -q 'external|system|build|bionic|art|libcore|prebuilt|dalvik') ; then
+        pfx="android_"
+    fi
+
+    project="${proj//\//_}"
+
+    git remote add liquid "git@github.com:LiquidSmooth/$pfx$project"
+    echo "Remote 'liquid' created"
 }
 
 function cmremote()
