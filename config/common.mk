@@ -204,6 +204,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.liquid.version=$(LIQUID_VERSION)
 
-ifneq ($(TARGET_ENABLE_UKM),true)
+ifeq ($(TARGET_ENABLE_UKM),true)
 -include vendor/liquid/config/common_ukm.mk
 endif
