@@ -106,7 +106,8 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     Terminal \
     LockClock \
-    KernelAdiutor
+    KernelAdiutor \
+    Eleven
 
 #    SlimFileManager removed until updated
 
