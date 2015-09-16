@@ -65,6 +65,7 @@ PRODUCT_COPY_FILES += \
 # Layers
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/Layers.apk:system/app/Layers/Layers.apk \
+	vendor/liquid/prebuilt/common/etc/Layersbackup.apk:system/app/Layersbackup/Layersbackup.apk
 
 # No Icon for Layers App
 PRODUCT_PROPERTY_OVERRIDES += \
