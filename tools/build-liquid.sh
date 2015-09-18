@@ -27,6 +27,7 @@ usage()
     echo -e ${txtbld}"  Example:"${txtrst}
     echo -e "    ./build-liquid.sh -p -o3 -j18 hammerhead"
     echo -e ""
+    sleep 10
     exit 1
 }
 
