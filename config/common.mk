@@ -75,8 +75,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Development \
-    SpareParts \
-    su
+    SpareParts
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
