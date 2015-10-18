@@ -118,6 +118,13 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     media_codecs_ffmpeg.xml
 
+# TCM (TCP Connection Management)
+PRODUCT_PACKAGES += \
+    tcmiface
+
+PRODUCT_BOOT_JARS += \
+    tcmiface
+
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
