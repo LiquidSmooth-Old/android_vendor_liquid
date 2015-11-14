@@ -118,18 +118,6 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     media_codecs_ffmpeg.xml
 
-# TCM (TCP Connection Management)
-PRODUCT_PACKAGES += \
-    tcmiface
-
-PRODUCT_BOOT_JARS += \
-    tcmiface
-
-# CM Hardware Abstraction Framework
-PRODUCT_PACKAGES += \
-    org.cyanogenmod.hardware \
-    org.cyanogenmod.hardware.xml
-
 # Root access on by default
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
@@ -211,7 +199,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.liquid.version=$(LIQUID_VERSION)
-
-ifeq ($(TARGET_ENABLE_UKM),true)
--include vendor/liquid/config/common_ukm.mk
-endif
