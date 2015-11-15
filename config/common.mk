@@ -67,6 +67,10 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/Layers.apk:system/app/Layers/Layers.apk \
 	vendor/liquid/prebuilt/common/etc/Layersbackup.apk:system/app/Layersbackup/Layersbackup.apk
 
+# Kernel Auditor
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/Kerneladiutor.apk:system/app/Auditor/Kerneladiutor.apk
+
 # No Icon for Layers App
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.layers.noIcon=noIcon
