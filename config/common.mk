@@ -28,9 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/liquid/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/liquid/prebuilt/common/bin/50-liquid.sh:system/addon.d/50-liquid.sh \
-    vendor/liquid/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/liquid/prebuilt/common/etc/backup.conf:system/etc/backup.conf
+    vendor/liquid/prebuilt/common/bin/50-liquid.sh:system/addon.d/50-liquid.sh
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
@@ -147,11 +145,6 @@ ifeq ($(RELEASE),true)
 else
     LIQUID_VERSION_STATE := $(shell date +%Y-%m-%d)
     LIQUID_VERSION := LS-MM-v$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VARIANT)-$(LIQUID_VERSION_STATE)
-endif
-
-# Chromium Prebuilt
-ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
--include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
 endif
 
 # HFM Files
