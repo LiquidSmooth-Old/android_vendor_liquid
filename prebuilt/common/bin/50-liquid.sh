@@ -10,7 +10,6 @@
 list_files() {
 cat <<EOF
 etc/hosts
-etc/init.d.cfg
 EOF
 }
 
